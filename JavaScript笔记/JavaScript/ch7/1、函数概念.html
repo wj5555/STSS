@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 在JS里面,可能会定义非常多的相同代码或者功能相似的代码,这些代码可能需要大量重复使用。
+    虽然for循环语句也能实现一些简单的操作,但是比较具有局限性,此时就需要使用JS中的函数 -->
+
+    <!-- 函数: 就是封装了一段可被重复调用执行的代码块。通过此代码块可以实现大量代码的重复使用 -->
+
+    <script>
+
+        // 求1~100的累加和
+        var sum = 0;
+        for(var i = 1; i <= 100; i++){
+            sum += i;
+        }
+        // console.log(sum);
+        alert(sum);
+
+
+        // 求10~50的累加和   (代码跟上一个基本一样,为了避免重复工作,就需要使用到函数)
+        var sum = 0;
+        for(var i = 10; i <= 50; i++){
+            sum += i;
+        }
+        // console.log(sum);
+        alert(sum);
+
+
+        // 函数
+        function getSum(num1,num2){
+            var sum = 0;
+        for(var i = num1; i <= num2; i++){
+            sum += i;
+        }
+        alert(sum);      //这里是弹出的形式输出结果, 以后调用这个函数时也是默认以弹出的形式输出结果
+        }
+        getSum(1,100)     //假如是求1~100的累加和。直接在这行输入(1，100)就行
+        getSum(1,500)     //假如是求1~500的累加和。直接在这行输入(1，500)就行
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

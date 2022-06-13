@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "..\\新建文件夹 (2)"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "新建文件夹"
+    }
+}

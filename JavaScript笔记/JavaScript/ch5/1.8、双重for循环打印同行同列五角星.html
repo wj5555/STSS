@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 分析:
+    内层循环负责一行打印五个星星
+    外层循环负责打印五行 -->
+
+    <script>
+
+        var num = prompt('请输入打印星星的行数');
+        var str = '';
+        for(var i = 1; i <= num; i++){       //打印五行
+            for(var j = 1; j <= 5; j++){   //每行打印五颗星星
+                str = str + '☆';
+            }
+            str = str + '\n';    //这里再追加字符串,执行完一行后,下一行自动换行
+        }
+        alert(str);
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

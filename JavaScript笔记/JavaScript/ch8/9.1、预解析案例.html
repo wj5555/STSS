@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var num = 10;     //这个num变量的当前作用域是全局作用域
+        fun();
+
+        function fun(){
+            console.log(num);
+            var num = 20;   //这个num变量的当前作用域是函数内部的,不会往外提,
+        }
+
+
+
+
+        // 先进行预解析: 把 var 和 function(函数) 整体提升到当前作用域的最前面
+        // 上面的那些代码在解析时执行了如下操作:
+        // var num;    //只提升全局作用域的那个nun
+        // function fun(){
+        //     console.log(num);
+        //     var num = 20;
+        // }
+        // num = 10;   //把那个全局作用域剩下的代码写在这里
+        // fun();   //把那个调用函数的fun();写在这里
+
+        // 【上面那些代码是只提升最外层全局作用域的变量提升】
+
+        // 因为function fun(){}内部也是一个函数作用域,需要进行函数提升,如下(把上面的预解析那些变量提升写在一起如下):
+        var num;
+        function fun(){
+            var num;    //函数提升里面的变量提升,不提升赋值,剩下的照写
+            console.log(num);
+            num = 20;   //照写值
+        }
+        num = 10;
+        fun();
+        // 完整的变量提升如上 
+        /* 执行过程:
+        var num (执行)
+        function(没调用不执行)
+        num = 10(执行)
+        function(由fun()调用之后,此时开始执行)
+        var num (执行,但是这个num没有赋值)
+        console.log(执行);  按照就近原则,输出num,但这个变量num没有赋值,所以输出undefined
+        num = 20(执行,但是没实际作用,因为log已经输出了) */
+
+
+
+
+
+
+
+
+        // 变量提升和函数提升: 大部分都是变量提升, 如果有函数包裹着变量的时候,就要提升这个函数,和函数里面的变量,
+        // 函数里面的变量只能提升到这个函数里面
+        // 变量提升看var  函数提升看function
+        // 提升变量时不提升赋值,另外不提升的代码都要照写下来
+
+        // 提升之后就是执行, 执行时是按照作用域链进行查找
+
+        // 查找的时候, 如果该函数没有调用,就不执行该函数,掠过
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

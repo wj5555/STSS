@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 用户输入年份,输出当前年份2月份的天数 -->
+
+    <!-- 分析: 如果是闰年,则月份是29天,如果是平年,则2月份是28天 -->
+
+    <script>
+
+
+        // 实现两个独立函数的调用
+
+
+
+
+
+
+        //用户输入
+        function backDay(){
+            var year = prompt('请您输入年份:');
+            if(isRunYear(year)){    //调用另一个函数需要用小括号    //当isRunYear函数输出true时,执行if里面的语句
+                alert('当前年份是闰年且2月份有29天');
+            } else{     //当isRunYear函数输出false时,执行else里面的语句
+                alert('当前年份是平年且月份有28天');
+            }
+        }
+        backDay();   //函数调用
+
+        //【上面是一个独立的函数】
+
+
+
+
+
+
+
+
+        // 判断是否为闰年的函数
+        function isRunYear(year){
+            //如果是闰年就返回true,否则返回false
+            var flag = false;
+            if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+                flag = true;
+            }
+            return flag;
+        }
+
+        //【上面也是一个独立的函数】
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

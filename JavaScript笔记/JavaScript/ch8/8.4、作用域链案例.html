@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 结果是几? -->
+
+    <script>
+
+        function f1(){
+            var num = 123;      //一级链
+            function f2(){      //一级链
+                num = 111
+                console.log(num);    //离123最近,输出的是111。方法: 从log一直往外找
+            }
+            f2();
+        }
+        var num = 456;
+        f1();
+
+        // 【距离log最近的分别是 111 > 123 > 456】
+        
+
+
+
+
+
+
+
+        /* 【有代码不会执行, 需要调用才会执行,调用了之后在执行的代码里有log才会输出】 */
+        var a = 1;
+        function fn1(){
+            var a = 1;
+            var b = '22';
+            fn2();      //调用fn2
+            function fn2(){
+                var a = 3;
+                fn3();    //调用fn3
+                function fn3(){
+                    var a = 4;
+                    console.log(a);      //求a的值   a输出4
+                    console.log(b);      //求b的值   b输出'22'
+                }
+            }
+        }
+        fn1();   //调用fn1
+
+
+    </script>
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 求数组[5,2,99,101,67,77]中的最大数值 -->
+
+    <script>
+
+        function getArrMax(arr){       //接收的形参是数组arr, 这里是接收数组,没有明确哪个数组先
+            var max = arr[0];     //把arr数组中的第一个值给max变量,作为暂时的最大值
+            for(var i = 1; i <= arr.length; i++){     //遍历数组中的每一个元素
+                if(arr[i] > max){       //如果arr里面的某一个元素大于max存放的元素
+                    max = arr[i];     //把这个元素放进max里面， 这里会直接替换掉原来的max值,因为左边用的是数组名
+                }
+            }
+            return max;     
+            //遍历结束后返回max的值，此时的值就是原来max里面所有变量中的最大值。这里不是输出,还要调用,还要log,才会输出
+        }
+        //getArrMax([5,2,99,101,67,77]);     //调用。实参。求数组最大值,所以括号里面传的是数组,把具体的数组写进来就行
+        //太长不方便下面的log输出,可以把输出存在一个变量里,如下:
+        var result = getArrMax([5,2,99,101,67,77]);   //函数返回结果getArrMax([5,2,99,101,67,77])存到result里面
+        //方便后期直接用,只需要把上一行的数组具体值改一下就能使用
+        console.log(result);   //调用。输出。
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

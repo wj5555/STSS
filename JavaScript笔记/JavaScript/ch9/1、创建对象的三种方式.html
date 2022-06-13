@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 对象(object): 在JavaScript中,对象是一组无序的相关属性和方法的集合,所有的事物都是对象,例如:
+    字符串,数值,数组,函数
+
+    属性: 事物的特征,在对象中用属性来表示(常用名词)
+
+    方法: 事物的行为,在对象中用方法来表示(常用名词) -->
+
+
+
+
+    <script>
+
+        // 创建变量的三种方法: 
+        // 1、利用字面量创建对象(ch_1只介绍这个)
+        // 2、利用new Object创建对象
+        // 3、利用构造函数创建对象
+
+
+
+
+
+
+        //利用字面量创建对象: 就是花括号{}里面包含了表达这个具体事务(对象)的属性和方法
+        //利用字面量创建对象: 一次只能创建一个对象
+
+        //里面的属性或者方法我们采取键值对的形式
+        //多个属性或方法中间用逗号隔开
+        //写法是冒号后面跟一个匿名函数
+
+
+        /* 格式:
+        var 变量名 = {
+            属性名: 属性值,
+            属性名: 属性值
+        } */
+
+
+        //var obj = {};        //创建了空的对象
+        var obj = {
+            uname: '张三',        //逗号结尾
+            age: 18,              //冒号后有一个空格
+            sex: '男',
+            sayHi: function(){    //匿名函数
+                console.log('hi~');
+            }
+        }
+
+
+
+        // 使用对象(调用对象的属性): console.log(对象名.属性名);
+        console.log(obj.uname); //输出张三
+
+        //使用对象(调用对象的属性): console.log(对象名['属性名'])
+        console.log(obj['age']); //输出18
+
+        //使用对象(调用有函数的对象的属性): 对象名.方法名()
+        obj.sayHi(); //输出hi~
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

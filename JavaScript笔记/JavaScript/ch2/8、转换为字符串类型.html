@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 使用表单、prompt获取过来的数据默认是字符串类型的,此时就不能直接简单的进行加法运算,而需要
+    转换变量的数据类型,通俗来说,就是把一种数据类型的变量转换成另外一种数据类型 -->
+
+
+
+    <!-- 转换为字符串
+
+    方式                   说明                            案例
+
+    toString()            转成字符串                       var num=1; alert(num.toString());
+
+    String()强制转换       转成字符串                       var num=1;alert(String(num));
+    
+    加号拼接字符串         和字符串拼接的结果都是字符串       var num=1;alert(num+"我是字符串"); -->
+
+
+
+    <!-- toString()和String() 使用方法不一样
+    三种转换方式,更建议用第三种加号拼接字符串转换方式,这一种方式称之为隐式转换 -->
+
+
+    
+
+
+    <script>
+
+        var num = 10;
+        var str = num.toString();         //把数字型转换为字符串型，转换之后把值放进str这个变量里
+        console.log(str);                 //输出这个变量str。输出为黑色字体的10,即字符串型
+        console.log(typeof str);          //检测str是什么变量  输出结果是string，即字符串型
+
+        console.log(string(num));         //把数字型转换为字符串型,输出为黑色字体的10,即字符串型
+
+        console.log(num);                 //输出看一下num原本是什么类型的变量,输出的是10,且字体是蓝色,即数字型
+
+        console.log(num + '');            //加一个空字符串,也可以把num转换为字符串型
+        // 上面那行输出的是10,且字体是黑色的,即num此时是字符串型,或叫字符型
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function Person(name){   //Person为实例化对象,是在堆里面存放数据,把'张三'存到name,即name='张三'
+            this.name = name;
+        }
+
+        function f1(x){   // 把下面的p传给这里的x
+            console.log(x.name);  //输出张三【2】
+            x.name = '张学友';  //对name重新赋值,此时name由原来的刘德华变成张学友
+            console.log(x.name);  //输出张学友 【3】
+        }
+
+        var p = new Person('张三');  //先执行这里,上面两个函数不调用不执行,执行完这里就执行上面的Person函数
+        //p的变量指向右边的复杂数据类型
+        //调用Person函数,使用了new所以是构造函数(复杂数据类型)
+
+        console.log(p.name);  //执行完Person函数就执行这一行,输出'张三'【1】
+        f1(p);  //执行完上一行后执行者一行,调用f1函数,执行完这里就执行上面的f1函数
+        console.log(p.name);  //最后一步执行这个,输出张学友 【4】
+
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .scene1 {
+            width: 600px;
+            height: 300px;
+            border: 2px solid red;
+            margin: 150px auto 0px;
+            perspective: 800px;
+        }
+
+        .scene1 .box {
+            width: 600px;
+            height: 300px;
+            /* transition: all ease 1s; */
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate-360 5s ease infinite;
+
+        }
+.item{
+    margin: 100px 250px;
+}
+@keyframes rotate-360 {
+    0%{
+        transform:rotateX(-10deg) rotateY(0deg) ;
+
+    }
+    100%{
+        transform:rotateX(-10deg) rotateY(360deg) ;
+
+    }
+}
+.scene1:hover .box{
+    animation-play-state: paused;
+}
+        
+        .scene1 .box .item:nth-child(1) {
+            position: absolute;
+            background: skyblue;
+            width: 100px;
+            height: 100px;
+            transform: translateZ(160px);
+
+        }
+
+
+        .scene1 .box .item:nth-child(2) {
+            position: absolute;
+            background: skyblue;
+            width: 100px;
+            height: 100px;
+transform: rotateY(40deg) translateZ(160px);
+        }
+
+        .scene1 .box .item:nth-child(3) {
+            position: absolute;
+            background: skyblue;
+            width: 100px;
+            height: 100px;
+            transform: rotateY(-40deg) translateZ(160px);
+
+        }
+
+        .scene1 .box .item:nth-child(4) {
+            position: absolute;
+            background: skyblue;
+            width: 100px;
+            height: 100px;
+            transform: rotateY(80deg) translateZ(160px);
+
+
+        }
+
+        .scene1 .box .item:nth-child(5) {
+            position: absolute;
+            background: skyblue;
+            width: 100px;
+            height: 100px;
+            transform: rotateY(-80deg) translateZ(160px);
+
+        }
+
+        .scene1 .box .item:nth-child(6) {
+            position: absolute;
+            background: skyblue;
+            width: 100px;
+            height: 100px;
+            transform: rotateY(120deg) translateZ(160px);
+
+        }
+
+        .scene1 .box .item:nth-child(7) {
+            position: absolute;
+            background: skyblue;
+            width: 100px;
+            height: 100px;
+            transform: rotateY(-120deg) translateZ(160px);
+
+        }
+
+        .scene1 .box .item:nth-child(8) {
+            position: absolute;
+            background: skyblue;
+            width: 100px;
+            height: 100px;
+            transform: rotateY(160deg) translateZ(160px);
+
+        }
+
+        .scene1 .box .item:nth-child(9) {
+            position: absolute;
+            background: skyblue;
+            width: 100px;
+            height: 100px;
+            transform: rotateY(-160deg) translateZ(160px);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scene1">
+        <div class="box">
+            <div class="item">111111111</div>
+            <div class="item">22222222</div>
+            <div class="item">333333333</div>
+            <div class="item">444444444</div>
+            <div class="item">5555555555</div>
+            <div class="item">66666666</div>
+            <div class="item">777777777</div>
+            <div class="item">8888888888</div>
+            <div class="item">999999999</div>
+        </div>
+    </div>
+</body>
+
+</html>

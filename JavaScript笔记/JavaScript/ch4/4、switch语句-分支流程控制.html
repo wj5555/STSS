@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- switch语句也是多分支语句,它用于在不同条件下来执行不同的代码,当要针对变量设置一系列的
+    特定值的选项时,就推荐使用awitch语句 -->
+
+
+
+<!-- 
+    语法结构:
+    switch(表达式) {                //表达式里面不建议直接写值,而是建议写变量
+        vase value1:               //value是值的意思
+            执行语句1;
+            break;                 //退出该条件语句
+        case value2:
+            执行语句2;
+            break;
+        case calue3:
+            执行语句3;
+            break;
+        ......
+        default:                   //当所有的case都不满足条件时退出
+            语句;                  //执行最后的语句
+
+    }
+ -->
+
+
+
+    <script>
+
+        switch(2) {
+            case 1:
+                console.log('这是1');
+                break;
+            case 2:
+                console.log('这是2');
+                break;
+            case '2':
+                console.log('这是字符型的2');
+                break;
+            case 3:
+                console.log('这是3');
+                break;
+            default:
+                console.log('程序错误');
+        }
+
+
+
+        switch(5) {
+            case 0:
+            console.log('0');
+            break;
+            case 5:
+            console.log('5');
+            break;
+            case 10:
+            console.log('10');
+            break;
+            case 100:
+            console.log('100');
+            break;
+            case -5:
+            console.log('-5');
+            break;
+            default:
+            console.log('程序错误');
+        }
+
+
+
+
+        var num = 3;        //num的值和case的值全等才会匹配
+        switch(num) {
+            case 1:
+                console.log('这是1');
+                break;      //如果缺失break，则不管下一个case是否满足,都会继续输出下一个case的值,直到遇到break
+            case 2:
+                console.log('这是2');
+                break;
+            case '3':
+                console.log('这是字符型的3');
+                break;
+            case 3:
+                console.log('这是3');
+                break;
+            default:
+                console.log('程序错误');
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

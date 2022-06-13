@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 【方法是数组中的内置对象】 -->
+
+    <!-- 数组转换为字符串
+
+    方法名               说明                                       返回值
+
+    toString()          把数组转换成字符串,逗号分隔每一项             返回一个字符串
+
+    join('分隔符')       方法用于把数组中的所有元素转换为一个字符串     返回一个字符串
+
+    splice()            数组删除splice(第几个开始,要删除个数)         返回被删除项目的新数组,注意会影响原数组
+
+    concat()            连接两个或多个数组,不影响原数组                返回一个新的数组
+
+    slice()             数组截取slice(begin,end)                     返回被截取项目的新数组 -->
+
+
+    <script>
+
+        // toString()将数组转换为字符串,缺点:转换后的数组的元素之间的分隔符默认只能是逗号
+        var arr = [1,2,3,4,5,6,7,8,9,10];
+        console.log(arr); //输出数字型的原数组,蓝色字体(数字型)
+        console.log(arr.toString());//不写参数,把数组里面的元素转换为字符串,输出字符串型的原数组,黑色字体(字符串型)
+
+        
+        // join('分隔符')将数组转换为字符串,优点:分隔符可以自定义
+        var arr1 = ['blue','red','green'];
+        console.log(arr1);   //输出原数组
+        console.log(arr1.join());  //不写参数,分隔符默认是逗号
+        console.log(arr1.join('-'));  //分隔符是横杠
+        console.log(arr1.join('&'));  //分隔符是表单符
+        
+
+
+
+
+        // 数组增删splice(第几个开始,要删除个数)
+        var arr2 = ['听','说','读','写',100,true]
+        console.log(arr2);   //输出原数组
+
+        console.log(arr2.splice()); //不写参数,即没有元素被删除,输出被删除的元素为空,即输出空数组
+        console.log(arr2);  //上面被删除了0个元素,此时输出数组元素为['听','说','读','写',100,true]
+
+        console.log(arr2.splice(0,4));//从索引值为0的数组元素开始,共删除4个元素,输出被删除的元素['听','说','读','写']
+        console.log(arr2);  //上面被删除了4个元素,此时输出数组元素为[100,true]
+
+        
+        var arr3 = [1,11,111,1111,11111];
+        console.log(arr3.splice(4,1)); //从索引值为4的元素开始,共删除1个,输出被删除的元素[11111]
+        console.log(arr3);  //输出此时arr3里面的数组元素[1,11,111,1111]
+
+        console.log(arr3.splice(-4,1));  //注意负数的索引值是以此时的数组,比如此时剩下4个元素,则最左边
+        // 的元素索引值为-4,最右边的索引值为0  即从左边的第一个开始,删除一个元素,输出被删除元素[1]
+        console.log(arr3);   //输出此时arr3里面的数组元素[11,111,1111]
+
+        console.log(arr3.splice(3,0,'我是新加的元素'));  //0表示没有元素被删除,输出被删除元素[]为空数组
+        // 上面那行最本质的作用是添加元素,从第三个位置添加元素,如果有多个元素要添加,则用逗号隔开
+        console.log(arr3);   //输出此时arr3里面的元素[11,111,1111,'我是新加的元素']
+
+        console.log(arr3.splice(4,0,'我又是新加元素','再来一个',100,true));  //输出被删除元素[]为空数组
+        // 上面那行最本质的作用是添加元素,从第四个位置添加元素,如果有多个元素要添加,则用逗号隔开
+        console.log(arr3);
+        //输出此时arr3里面的元素[11,111,1111,'我是新加的元素','我又是新加元素','再来一个',100,true]
+
+        console.log(arr3.splice(3,4,'我前有1后有这','这后面有true'));  
+        //输出被删除元素['我是新加的元素','我又是新加元素','再来一个',100]
+        console.log(arr3);
+        //输出此时arr3里面的元素[11,111,1111,'我前有1后有这','这后面有true',100,true]
+  
+
+
+
+
+        // slice查找数组用法
+        var arr4 = ['a','b','c','d','e'];
+        console.log(arr4);   //输出原数组
+
+        console.log(arr4.slice());  //不写参数,查找整个数组,输出数组被查找的数组['a','b','c','d','e']
+        console.log(arr4);  //输出此时数组['a','b','c','d','e']
+
+        console.log(arr4.slice(3,5));   //与索引无关,就看数组里第几个元素(查找时不含起始元素)
+        // 从第3个元素(比较特殊,因为不包含3这个元素)到第5个元素,查找出来并输出['d','e']
+        console.log(arr4);  //不改变原数组,即原数组不变,输出['a','b','c','d','e']
+
+
+
+
+
+
+        // concat连接数组用法
+        var arr5 = [1,2,3];
+
+        // 1、连接数组中的变量
+        console.log(arr5.concat(4,5));   //把4和5添加进原数组,输出[1,2,3,4,5]
+        console.log(arr5);   //不改变原数组,即原数组是没有拼接的,输出[1,2,3]
+
+        // 2、连接不同数组(先创建3个数组)
+        var arr11 = new Array(3);  //3是数组长度,
+        arr11[0] = '好好';
+        arr11[1] = '学';
+        arr11[2] = '习';
+        var arr111 = new Array(1)
+        arr111[0] = ',';
+        var arr1111 = new Array(3);
+        arr1111[0] = '天天';
+        arr1111[1] = '向';
+        arr1111[2] = '上';
+        console.log(arr11.concat(arr111,arr1111));   //输出 ['好好', '学', '习', ',', '天天', '向', '上']
+
+        console.log(arr11);    //原数组不受影响
+        console.log(arr111);   //原数组不受影响
+        console.log(arr1111);  //原数组不受影响
+
+        // 3、连接多个字符串
+        var arra = 'Hellow';
+        var arrb = 'World';
+        var arrc = '!';
+        console.log(arra.concat(arrb,arrc));   //输出HellowWorld!
+        // 原数组不受影响
+
+
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

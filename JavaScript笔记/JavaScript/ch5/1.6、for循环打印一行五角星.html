@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //一行打印五个星星,采取追加字符型的方式,这样打印到控制台上, 否则会打印出⑤★
+        //点开键盘,再点击符号大全,选星星符号
+        //for(var i = 1; i <= 5; i++){
+        //    console.log('★');
+        //}
+        // 【上面那些是错误写法,会输出⑤★】
+
+
+        var str = '';     //追加字符串   定义一个空字符串
+        for(var i = 1; i <= 5; i++){
+            str = str + '★';
+            // 第一次循环时,右边的str为0颗星星,加一颗之后,再赋值给左边的str,此时左边的str有一颗星星
+            // 第二次循环时,右边的str为1颗星星,加一颗之后,再赋值给左边的str,此时左边的str有两颗星星
+            // 全部执行完之后,str里面就要五颗星星,再输出str
+        }
+        console.log(str);
+
+
+
+        var num = prompt('请输入星星的个数');     //让用户决定打印多少颗星星
+        var str = '';
+        for(var i = 1; i <= num; i++){
+            str = str + '★';
+        }
+        alert(str);
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

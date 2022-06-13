@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 根据字符返回位置
+    字符串所有的方法,都不会修改字符串本身(字符串是不可变的),操作完成后会返回一个新的字符串
+
+    方法名                               说明
+
+    indexOf('要查找的字符',开始的位置)    返回指定内容在原字符串中的位置,如果找不到就返回-1,开始的位置是index索引号
+
+    lastIndexOf()                       从后往前找,只找第一个匹配的 -->
+
+
+    <script>
+
+        var str = '五星红旗迎风飘扬,五岳红峰风相竞';  //逗号、空格也占索引号位置,索引号从0开始
+        console.log(str.indexOf('红'));   //查找'红'的索引号,输出2 (多个'红'只查找第一个'红')
+        console.log(str.indexOf('红',3));   //从索引号为3开始往后找,就掠过第一个'红',从而查找第二个'红',输出11
+
+        console.log(str.lastIndexOf('五')); //从后往前找,只找第一个'五'(索引排序依旧是左往右),输出9
+        console.log(str.lastIndexOf('五',8)); //从后(右)往前(左)找,第8是逗号的位置,从逗号往前(左)找,输出0
+        // 只是找的开始位置不同,索引号都是从左到右为0~15
+
+        console.log(str.indexOf('星','岳'));   //查找索引号。两个要找的只找一个,输出'星'的索引号为1
+        console.log(str.lastIndexOf('星','岳'));   //查找索引号。两个要找的只找一个,输出'星'的索引号为1
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

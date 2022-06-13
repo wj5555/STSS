@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 用户输入数字, 如果数字小于0,则在前面补0,比如01,09,如果数字大于0,则不需要补,比如20 -->
+
+    <!-- 分析:
+    用户输入的一个数字
+    如果数字小于10,则在这个数字前面补0,否则不做操作
+    用一个变量接收这个返回值,输出 -->
+
+
+    <script>
+
+        var time = prompt('请您输入一个数字');
+        //time < 10 ? '0' +time : time;        字符串拼接'0' +time。如果不成立则返回原值time
+        // 上面那一行是表达式的返回值,还需要赋值给一个变量才可以输出结果,如下:
+        var result = time < 10 ? (time.length ==  1 ? time : '0' + time/1) : (time/1) ;//把返回值赋值给变量result
+        // 上面那行是嵌套使用三元表达式,可以解决当输入01时造成的001的返回值bug
+        alert(result);        //弹出返回值
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

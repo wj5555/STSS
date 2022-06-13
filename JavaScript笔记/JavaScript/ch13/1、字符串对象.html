@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 基本包装类型
+    为了方便操作基本数据类型,JavaScript还提供了三个特殊的引用类型: String(字符串型)、Number(数字型)和Boolean(布尔型)
+    基本包装类型就是把简单数据类型包装成为复杂数据类型,这样基本数据类型就有了属性和方法 -->
+
+
+    <script>
+
+        var str = 'andy';
+        console.log(str.length);   //输出变量的字符串长度,输出4
+
+        // 思考: str是简单数据类型,怎么会有属性呢。 对象(复杂数据类型)才有属性和方法
+        //为什么str这个简单数据类型会有length属性?
+
+        // 答案: 上面的str那两行代码是基本包装类型(把简单数据类型包装成为了复杂数据类型)
+
+        /* 上面的str那两行代码在js内部的实际情况如下:
+        var temp = new String('andy'); //构造函数  加了new变成复杂数据类型,把值赋值给临时变量temp
+        str = temp;  //把临时变量里面的值给左边的str  此时的str是复杂数据类型,有length属性
+        temp = null; //销毁这个临时变量 */
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        fi();               //外层(全局作用域)没有变量, 就直接进行函数提升, 再对函数里面的变量进行变量提升
+        console.log(c);
+        console.log(b);
+        console.log(a);
+        function f1(){
+            var a = b = c = 9;
+            console.log(c);
+            console.log(b);
+            console.log(a);
+        }
+
+
+        // 解析过程如下:  【分析版】
+        function f1(){
+            var a = b = c = 9;  //这一行相当于 var a = 9; b = 9; c = 9;
+            //特别要注意, 这里只有a前面有var，b和c的前面没有var
+            //就会造成b和c没有声明就直接赋值, 此时b和c就会当作全局变量(任何地方都可以使用)来看
+
+            //正确的多个变量赋值的方法是 var a = 9, b = 9, c = 9;
+            console.log(c);
+            console.log(b);
+            console.log(a);
+        }
+        fi();
+        //下面的c、b、a会分别输出9、9、报错     因为c、b是全局变量,可以随便使用,a是局部变量,只能在
+        //function内部使用,外面的log是调用不了的,调用就会报错
+        console.log(c);
+        console.log(b);
+        console.log(a);
+
+
+
+
+
+
+
+        // 解析过程如下:  【完整版】
+        function f1(){
+            var a;             //a是局部变量,只能函数内部使用
+            a = b = c = 9;     //b、c是全局变量, 哪都可以调用使用这个值
+            console.log(c);
+            console.log(b);
+            console.log(a);
+        }
+        fi();
+        console.log(c);
+        console.log(b);
+        console.log(a);
+
+
+
+
+
+
+
+        /* 执行过程如下:
+        function (没调用,不执行)
+        function (由f1()调用,此时执行)
+        var a (执行,但是这个a没有赋值)
+        a = b = c = 9 (执行)
+        console.log(a) (执行,输出9)
+        console.log(b) (执行,输出9)
+        console.log(c) (执行,输出9)
+        console.log(c) (执行,输出9)
+        console.log(b) (执行,输出9)
+        console.log(a) (执行,报错) */
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

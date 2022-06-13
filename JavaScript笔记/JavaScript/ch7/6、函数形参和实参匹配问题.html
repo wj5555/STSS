@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function getSum(num1,num2){    //两个形参(每个形参都是一个变量)
+            console.log(num1 + num2);
+        }
+
+        // 第一种情况: 如果实参的个数和形参的个数一致,则正常输出结果
+        getSum(1,2);
+
+        // 第二种情况: 如果实参的个数多于形参的个数一致,则按形参的个数输出,多出来的个数无视
+        getSum(1,2,3);
+
+        // 第三种情况: 如果实参的个数少于形参的个数一致,则形参里空余的变量没有接受值,就会输出该变量为undefined
+        getSum(1);     //输出结果为NaN
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

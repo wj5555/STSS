@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      while (true) {
+        var mont = prompt("请输入你的成绩");
+        if (0 < mont && mont <= 100) {
+          if (mont >= 90) {
+            alert("名列前茅");
+          } else if (mont >= 80) {
+            alert("优秀");
+          } else if (mont >= 70) {
+            alert("良好");
+          } else if (mont >= 60) {
+            alert("及格");
+          } else if (mont < 60) {
+            alert("不及格");
+          }
+        } else {
+          alert("请确保你的输入正确");
+        }
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>

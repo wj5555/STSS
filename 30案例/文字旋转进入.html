@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            padding: 0;
+        }
+        .box {
+            width: 400px;
+            height: 300px;
+            background: red;
+            margin: 50px ;
+            position: relative;
+            overflow: hidden;
+        }
+
+        img {
+            width: 400px;
+            height: 300px;
+        }
+
+        .box:hover img {
+            filter: blur(5px);
+            /*    滤镜 */
+        }
+
+        .mask {
+            width: 510px;
+            height: 0px;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0px;
+            transform-origin: left center;
+            transform: rotate(37deg);
+transition: all ease .5s;
+        }
+        .box:hover .mask {
+            height: 300px;
+            top: -150px;
+            
+        }
+        .ma-text{
+            opacity: 0;
+            margin-left: 65px;
+            width: 270px;
+position: absolute;
+TOP: 80PX;
+transform: rotate(37deg);
+color: #fff;
+transition: all ease .5s;
+
+        }
+
+        
+        .box:hover .ma-text {
+            transform: rotate(0deg);
+            opacity: 1;
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"><img src="./1.png" alt="">
+        <div class="mask"></div>
+        <div class="ma-text">
+        <h3>将进酒</h3>
+            人生得意须尽欢，莫使金樽空对月。
+                    天生我材必有用，千金散尽还复来。
+        </div>
+    </div>
+    
+</body>
+
+</html>

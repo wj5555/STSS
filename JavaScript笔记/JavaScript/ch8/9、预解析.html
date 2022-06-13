@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+
+        // console.log(num);   //num没有声明没有赋值, 输出报错
+
+
+
+
+        console.log(num);                  //【变量提升】
+        var num = 10;      //有声明有赋值,输出undefined
+        // 分析: 它的当前作用域是全局作用域,只提升变量,不提升赋值,变量没有拿到值,则输出undefined
+        /* 解析之后的样子如下:
+        var num;    //解析的时候,num的值没有提升过来
+        console.log(num);
+        num = 10; */
+
+
+
+
+        function fn(){               //【函数提升】
+            console.log(11);
+        }
+        fn();     //输出11  (当调用写在后面的时候)
+        //无论fn();调用是写在前面还是后面,解析的时候会把function fn()函数名自动提升到前面,
+        //此时fn();调用永远在后面。写的时候随便写在前面或后面,解析时会自动调整
+
+
+
+
+        fn2();                       //【函数提升】
+        function fn2(){
+            console.log(12);
+        }       //输出12  (当调用写在前面的时候)
+        //无论fn();调用是写在前面还是后面,解析的时候会把function fn()函数名自动提升到前面,
+        //此时fn();调用永远在后面。写的时候随便写在前面或后面,解析时会自动调整
+
+
+
+
+
+
+        var fun = function(){                          //【变量提升】
+            console.log(23);
+        }
+        fun();   //输出23  (函数表达式的情况下, 且fun在后面的时候)
+        /* 预解析之后的样子如下:(先提升到当前作用域,当前作用域为全局作用域)
+        var fun2;       //再把var提升到当前作用域的前面，剩下的照写(解析之后fun2这里是没有赋值的)
+        fun2 = function(){
+            console.log(24);
+        }
+        fun2();      //此时调用上面有fun2这个函数,此时调用不会报错*/
+
+
+
+
+
+        fun2();   //报错  (函数表达式的情况下, 且fun2在前面的时候)      【变量提升】
+        var fun2 = function(){    //这里的fun2是变量名,因为fun2前面有一个var
+            console.log(24);
+        }
+        /* 预解析之后的样子如下:(先提升到当前作用域,当前作用域为全局作用域)
+        var fun2;       //再把var提升到当前作用域的前面，剩下的照写(解析之后fun2这里是没有赋值的)
+        fun2();         //上面的代码没有fun2这个函数,此时调用就会报错
+        fun2 = function(){
+            console.log(24);
+        } */
+
+
+
+
+
+
+
+
+
+
+
+        /* 预解析介绍: JavaScript代码是由浏览器中的JavaScript解析器来执行的。JavaScript解析器在运行JavaScript代码的
+        时候分为两步: 解析器和代码执行  (先解析代码再执行代码)
+
+            1、预解析: js解析器(引擎)会把js里面所有的var和function提升到当前作用域的最前面
+            2、代码执行: 按照代码书写的顺序从上往下执行
+
+        预解析分为: 变量预解析(变量提升)  和   函数7预解析(函数提升)
+            1、变量提升: 就是把所有的变量声明提升到当前的作用域最前面(只提升声明,不提升赋值操作,还得在当前作用域)
+            2、函数提升: 把所有的函数声明提升到当前作用域的前面(只提升不调用) */
+
+
+
+
+
+/* 
+            function fn(){        //利用关键字进行函数声明的表达式形式   (可以提升)  。 这种fn()调用上下都可以
+                console.log(11);
+            }
+            fn();
+
+
+
+            fun();
+            var fun = function(){    //报错。进行函数赋值的表达式形式   (不能提升) 。 这种fun()调用要写在下面
+                console.log(22);
+            }
+
+ */
+
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

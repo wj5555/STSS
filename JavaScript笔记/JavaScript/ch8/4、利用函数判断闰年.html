@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 输入一个年份,判断是否是闰年(闰年: 能被4整除并且不能被100整除,或者能被400整除) -->
+
+    <script>
+
+        function isRunYear(year){        //这里的year是形参
+            var flag = false;
+            if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+                flag = true;
+            }
+            return flag;
+            //上面的var~return都是封装
+        }
+
+        console.log(isRunYear(2000));      //这里的2000是实参, 传到isRunYear的形参里面
+        //判断2000年是不是闰年, 输出true
+
+        console.log(isRunYear(1999));   //输出false
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

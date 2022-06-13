@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 求数组[2,6,1,7,4]里面所有元素的和sum以及平均值average -->
+
+    <!-- 分析:
+    声明一个求和变量sum
+    遍历这个数组,把里面每个数组元素都加到sum里面
+    用求和变量sum除以数组的长度就可以得到数组的平均值 -->
+
+
+    <script>
+
+        var arr = [2,6,1,7,4];
+        var sum = 0;
+        var average = 0;
+        for(var i = 0; i < arr.length; i++){      //遍历每个元素  注意arr.length是计算数组长度
+            sum += arr[i];           //这里不要写sum += i; 因为i是计数器,arr[i]是数组元素
+        }
+        average = sum / arr.length;   //总和除以数组总个数, 即求数组的平均值
+        console.log(sum,average);   //当结束整个循环时输出数组的元素之和sum。输出sum结果是20,输出average结果是4
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

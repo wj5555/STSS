@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- 方式                        说明                              案例
+    
+    parselnt(string)函数        将string类型转成整数数值型         parselnt('18')
+
+    parseFloat(string)函数      将string类型转成浮点数数值型       parseFloat('18.01')
+
+    Number()强制转换函数         将string类型转换为数值型          Number('18')
+
+    js隐式转换(- * /)            利用算数运算隐式转换为数值型      '18'-0 -->
+
+
+    <!-- 【注意parseInt和parseFloat单词的大小写】 -->
+
+
+
+    <script>
+
+        var age = prompt('请输入您的年龄');       //弹出输入框且保存用户输入的值
+        //console.log(age);      输出看是字符串型或叫字符型,因为是prompt取的值默认是字符型,字体为黑色
+        console.log(parseInt(age));    //把age强制转换为整型,即数字型,字体为蓝色。只能为整数的数字型,小数不行
+
+        console.log(parseInt('3.14'));     //把3.14转换为整型,结果为3
+        console.log(parseInt('3.99'));     //把3.99转换为整型,结果为3
+
+        console.log(parseInt('180px'));    //把180px转换为整型,注意180px既有数字又有像素单位,结果为180
+        console.log(parseInt('rem180px'));    //结果为NaN,即无法识别
+
+
+
+        console.log(parseFloat('3.14'));      //结果为3.14,即parseFloat可以转化成小数
+        // parseFloat和parseInt的情况和用法是一样的,就精确不同
+
+
+        var str = '456';
+        console.log(str);                  //原本的str是黑色字体,即字符型或叫字符串型
+        console.log(Number(str));          //强制转换为数字型,结果是123,蓝色字体
+        console.log('18');                 //原本的'18'是黑色字体,即字符型或叫字符串型
+        console.log(Number('18'));         //将'18'强制转换为数字型,结果是18,蓝色字体
+
+
+        console.log('12 '- 0);             //字符型减0,隐式转换即利用算数运算隐式转换为数字型,结果是12
+        console.log('456' - '453');        //字符型减字符型且中间一个减号,结果是3,因为二者都转换成了数字型
+        console.log('456' * 1);            //结果为456,也可以转换为数字型。这些转换关键在于减号的存在
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

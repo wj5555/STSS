@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 求数组长度的语法: 数组名.length -->
+
+    <!-- 索引号从0开始, 数组长度是元素个数 -->
+    
+
+    <script>
+
+        //计算未知数组里面的数组长度
+        //使用"数组名.length"可以访问数组元素的数量(数组长度)
+        var arr1 = ['1','2','3','4','5','6','7'];
+        //for(var i = 0; i < 7; i++){   //作此判断i<7的i范围如何准确知道, 即解决写出这个循环需要i值,如下未注释的
+        //    console.log(arr1[i]);
+        //}
+        console.log(arr1.length);
+        // 【可判断i的最大值, 即获取该数组的长度, 输出结果是7】
+
+
+
+        //快速使用arr.length属性, 即在执行循环过程中还能获取该数组的长度
+        var arr2 = ['1','2','3','4','5','6','7','8','9','10'];
+        for(var j = 0; j < arr2.length; j++){
+            console.log(arr2[j]);
+        }
+        // 【在不知道索引(下标)的情况下遍历数组, 即每个数组里面的元素都输出一次】
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

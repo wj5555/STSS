@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 缕清两个函数的执行情况 -->
+
+
+
+    <!-- 先fn1, 但是fn1没有调用, 所以不执行
+
+    再遇到fn2, 也没有调用, 所以也不执行
+
+    到最下面遇到fn1(); 就回到fn2执行log(111), 此时打印出111
+
+    再往下遇到fn2();  就去执行fn2, 打印log(222), 再打印log('fn2')
+
+    最后回来打印fn1里面最后一行的log('fn1') -->
+
+
+
+
+    <script>
+
+        function fn1(){
+            console.log(111);
+            fn2();
+            console.log('fn2');
+        }
+
+
+        function fn2(){
+            console.log(222);
+            console.log('fn2');
+        }
+        fn1();
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

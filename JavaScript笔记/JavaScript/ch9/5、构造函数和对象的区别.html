@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 构造函数: 如Stars(),抽象了对象的公共部分,封装到了函数里面,它泛指某一大类(class)
+    创建对象: 如new 如Stars(),特指某一个,通过new关键字创建对象的过程,也称为对象实例化 -->
+
+    <script>
+
+        // 构造函数: 是泛指的某一大类
+        function Star(uname,age,sex){
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(sang){
+                console.log(sang);
+            }
+        }
+
+        //对象: 特指 是一个具体的事物
+        var test = new Star('小帅','99','男');    //new是用来调用上面的构造函数,构造函数要调用才会有输出
+        console.log(test);
+
+        // new了谁,对象就会实例化
+        //利用构造函数创建对象的过程称为对象的实例化,比如上面的小帅就是一个实例,小帅也可以叫对象
+
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

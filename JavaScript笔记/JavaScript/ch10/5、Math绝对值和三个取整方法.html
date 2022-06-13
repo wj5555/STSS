@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Math对象不是构造函数,它具有数学常数和函数的属性和方法,跟数学相关的运算(求绝对值,取整,最大值)可以使用Math中的成员 -->
+    
+<!--     
+    Math.PI            //圆周率
+    Math.floor()       //向下取整, floo是地板的意思
+    Math.ceil()        //向上取整, ceil是天花板的意思
+    Math.round()       //四舍五入,就近取整   注意-3.5结果是-3
+    Math.abs()         //绝对值
+    Math.max()         //求最小值
+    Math.min()         //求最大值
+ -->
+
+    <script>
+
+        console.log(Math.abs(1));   //输出1
+        console.log(Math.abs(-1));   //输出1
+        console.log(Math.abs('-1'));   //字符串型的-1，输出1,说明会自动隐式转换
+        console.log(Math.abs('blue'));   //输出NaN
+
+
+
+        console.log(Math.floor(1.1));   //1.1向下取整,输出1
+        console.log(Math.floor(1.9));   //1.9向下取整,输出1
+
+        console.log(Math.ceil(1.1));   //1.1向上取整,输出2
+        console.log(Math.ceil(1.9));   //1.9向上取整,输出2
+
+        console.log(Math.round(1.1));  //1.1四舍五入,输出1
+        console.log(Math.round(1.5));  //1.5四舍五入,输出2
+        console.log(Math.round(1.9));  //1.9四舍五入,输出2
+        console.log(Math.round(-1.1));  //-1.1四舍五入,输出-1
+        console.log(Math.round(-1.5));  //-1.5四舍五入,输出-1
+
+        // 四舍五入的.5是往大的取,比如1.5就是2, -1.5就是1
+
+
+    </script>
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

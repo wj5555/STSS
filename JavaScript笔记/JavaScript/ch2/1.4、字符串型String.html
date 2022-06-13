@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <!-- 字符串型可以是引号中的任意文本,其语法为双引号""和单引号''
+
+    var strMsg = "你好呀";         //使用双引号表示字符串
+    var strMsg2 = '晚上好呀';      //使用单引号表示字符串
+    var strMsg3 = 嗯嗯嗯;         //错误写法,没使用引号会被认为是js代码,但js没有这些语法
+ 
+    因为HTML标签里面的属性使用的是双引号,js这里我们更推荐使用单引号 -->
+
+
+
+
+    <!-- 字符串引号嵌套:
+    js可以用单引号嵌套双引号,或者用双引号嵌套单引号(外双内单,外单内双)
+
+    var strMsg = '我是"憨憨的"程序员';       //可以用''包含""
+    var strMsg2 = "我是'憨憨的'程序员";      //也可以用""包含''
+    var badQuotes = 'hellow world"         //错误写法不能单双引号搭配 -->
+
+
+
+
+    <!-- 字符串转移符:
+    类似HTML里面的特殊字符,字符串中也有特殊字符,称之为转义符,以\开头
+
+    转义符                 解释说明
+
+    \n                    换行符,n是newline,即新行的意思
+
+    \\                    斜杠\
+
+    \'                    单引号'
+
+    \"                    双引号"
+
+    \t                    tab 缩进
+
+    \b                    空格 b是blank的意思
+
+    字符串转移字符是以\开头,但是这些转移字符需要写在引号里面 -->
+
+
+
+    
+    <script>
+
+        var str1 = '臭宝要珍惜时间呦';        //正常写法
+        console.log(str1);
+
+        var str2 = '臭宝要"珍惜"时间呦';      //外单内双
+        console.log(str2);
+
+        var str3 = "臭宝要'珍惜'时间呦";      //外双内单
+        console.log(str3);
+
+        var str4 = "臭宝\n要'珍惜'时间呦";    //换行
+        console.log(str4);
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

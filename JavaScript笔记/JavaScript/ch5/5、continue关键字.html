@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- continue关键字用于立即跳出本次循环, 继续下一次循环(本次循环体中continue之后的代码就会少执行一次) -->
+
+    <script>
+
+        //例如: 吃10个包子,第3个有虫子,就扔掉第3个,继续吃其他包子,代码如下: 
+        for(var i = 1; i <= 10; i++){
+            if(i == 3){
+                continue;      //当执行第3次时,自动跳过
+            }
+            alert('我正在吃第' + i + '个包子');
+        }
+
+
+
+        //求1~100之间,除了能被7整除之外的整数和
+        var sum= 0;
+        for(var i = 1; i <= 100; i++ ){
+            if(i % 7 == 0){
+                continue;       //能被7整除的自动排除
+            }
+            sum += i;  //把不能被7整除的加起来   continue不会执行到这句话
+        }
+        alert('1~100之间,除了能被7整除之外的整数和:' +  '  ' + sum);   //整个循环结束后就弹出结果  ' '代表空格
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

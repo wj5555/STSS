@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- 在JavaScript中,递增(++)和递减(--)既可以放在变量前面,也可以放在变量后面
+    放在前面时,称为前置递增(递减)运算符,放在后面时,称为后置递增(递减)运算符 -->
+
+    <!-- 递增和递减运算符必须和变量配合使用 -->
+
+    <!-- i++ 和 ++i 单独使用时效果是一样的 -->
+
+
+    <script>
+
+        var num1 = 1;
+        num1 = num1 + 1;             //变量自加1
+        num1 = num1 + 1;             //变量再自加1
+        console.log(num1);          //输出的结果是3
+
+        var age =10;
+        ++age;                     //前置递增,变量自加1
+        console.log(age);          //输出的结果是11
+
+        var n = 12;
+        console.log(++n + 100);    //结果是113
+
+        var num2 = 14;
+        num2++;                     //后置递增,变量自加1
+        console.log(num2);          //输出的结果是15
+
+        var num3 = 16;
+        console.log(num3++ + 100);    //先运算再自增,结果是116。num3在运算出116之前是16,运算出116之后是17
+        console.log(num3);            //此时num3是17
+
+
+        var a = 18;
+        ++a;                       //18+1得出c++的结果为19之后再c的值+1,c的值为19
+        console.log(a);            //19
+        var b = ++a +2;            //19+1 +2   先加1再运算,值为22,运算出b等于22之后,a的值变成20
+        console.log(a);            //20
+        console.log(b);            //22
+
+        var c = 23;
+        c++;                       //23+1得出c++的结果为24之后再c的值+1,c的值为24
+        console.log(c);            //24
+        var d = c++ +2;            //24+2得出d的结果为26之后再c的值+1,c的值为25
+        console.log(c);            //25
+        console.log(d);            //26
+
+        var e = 27;
+        var f = e++ + ++e;         //27+ 28+1 = 56
+        // 上面那行前半部分e++的值为27,但后台的e此时为28
+        // 后半部分++e的值为28+1,28由于已经被前半部分影响,所以为28
+        // 两部分都运算完了之后,e为29
+        console.log(e);         //29
+        console.log(f);         //56
+
+
+
+
+        // 【总结】:
+
+        // a++    假设 10++ +1  运算结果是11, 但运算之后a的值变成了11
+
+        // ++a    假设 ++10 +1  运算结果是12, 先a的值自加1再参与这个运算(a的值提前变成了11)
+
+             
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

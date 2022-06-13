@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 逻辑运算符是用来布尔值运算的运算符,其返回值也是布尔值,后面开发中经常用于多个条件的判断 -->
+
+
+<!-- 
+
+    逻辑运算符        说明                  案例
+
+    &&               与,and                true && false
+
+    ||               或,or                 true || false
+
+    !                非,not                ! true
+
+ -->
+
+
+
+    <script>
+
+        console.log(3 > 5 && 3 > 2);       //3大于5是假,3大于2是真,假和真的与运算,输出结果为false
+        console.log(3 < 5 && 3 > 2);       //3大于5是真,3大于2是真,真和真的与运算,输出结果为true
+
+        console.log(3 > 5 || 3 > 2);       //假和真的或运算,输出结果是true
+        console.log(3 > 5 || 3 < 2);       //假和假的或运算,输出结果是false
+
+        console.log(!true);                //非真,输出结果为false
+        console.log(!false);               //非假,输出结果为true
+
+
+
+
+        var num = 7;
+        var str = "要好好学~哦~";         //str的字符长度是7个字符
+
+        console.log(num > 5 && str.length >=  num); //7大于五为真,str字符长度大于等于7为真,真真与运算为真,输出结果是true
+
+        console.log(num < 5 && str.length >=  num); //前者为假,后者为真,假真与运算为假,输出结果是false
+
+        console.log(!(num < 10));  //7小于110为真,非真(!true)为假,输出结果是false
+
+        console.log(!(num < 10 || str.length == num));//!(真||真,真真或运算为真,再!(true)为假,输出结果为false
+
+        // 【有小括号先算小括号里面的】
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

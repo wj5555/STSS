@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 根据位置返回字符(重点)
+
+    方法名              说明                                        使用
+
+    charAt(index)       返回指定位置的字符(index 字符串的索引号)      str.charAt(0)
+
+    charCodeAt(index)   获取指定位置处字符的ASCII码(index索引号)      str.charCodeAt(0)
+
+    str[index]          获取指定位置处字符                           HTML5,IE8+支持 和charAt()等效 -->
+
+
+
+    <script>
+
+        //返回对应索引号的元素
+        var str = 'andy';
+        console.log(str.charAt(3));   //根据索引号输出对应的元素
+
+        //遍历所有的字符,返回对应索引号的元素
+        for(var i = 0; i < str.length; i++){
+            console.log(str.charAt(i));   //输出数组里面的全部元素
+        }
+
+        //返回对应索引号的ASCII码  目的:判断用户按下了哪个键(游戏开发,比如按右箭头就往右边移动1像素)
+        console.log(str.charCodeAt(0));   //索引值为0的是第一个数组元素a,对应的ASCII码为97,输出97(蓝色字体)
+
+        //HTML5新增,返回对应索引号的元素
+        console.log(str[0]);     //输出索引号为0的元素,输出a
+        
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

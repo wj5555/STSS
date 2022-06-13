@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求在页面中弹出一个输入框,用户输入出生年份后,能计算出我们的年龄 -->
+
+
+    <!-- 分析:
+    弹出一个输入框(prompt),让用户输入出生年份(用户输入)
+    把用户输入的值用变量保存起来,然后用今年的月份减去变量值,结果就是现在的年龄(程序内部处理)
+    弹出警示框(alert),把计算的结果输出(输出结果) -->
+
+          
+    <script>
+
+        //prompt('请你输入您的出生年份');
+        var year = prompt('请输入您的出生年份');
+        var age = 2022 - year;    //2022是今年年份,year取过来的是字符串型,而2022是数字型,所以year需要转换
+        // 上面那行的减号就是隐式转换,自动把year转换成数字型
+        alert('您今年'+age+'岁了');
+
+    </script>
+
+
+
+
+    <!-- 要求计算两个数的值,用户输入一个值后,继续弹出第二个输入框并输入第二个值,最后
+    通过弹出窗口提示出两次输入值相加的结果 -->
+
+
+    <!-- 分析: 先弹出第一个输入框,提示用户输入第一个值,保存起来
+    再弹出第二个框,提示用户输入第二个值,保存起来
+    把这两个值相加,并将结果赋给新的变量(注意数据类型的转换)
+    弹出警示框(alert),把计算的结果输出(输出结果) -->
+
+
+    <script>
+
+        var num1 = prompt('请您输入第一个值');
+        var num2 = prompt('请您输入第二个值');
+
+        // var result = num1 + num2;
+        // alert('您的结果是:' + result)
+        // 假如num1的值为18,,num2的值为18,则输出为1818,即上面两行是错误的
+        // 原因是prompt取过来的值是字符型而不是数字型,不能参与算数运算,需要先转换数据类型
+
+        var result = parseFloat(num1) + parseFloat(num2);  //转化为数字型
+        alert('您的结果是:' + result);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

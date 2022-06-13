@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .remove-text {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            background: red;
+            transition: 1s;
+        }
+        .remove-box1 {
+            margin: 0;
+            width: 80px;
+            height: 20px;
+            border: 1px solid red;
+            position: absolute;
+            top: -30px;
+            transition: 1s;
+        }
+        .remove-box2 {
+            width: 50px;
+            height: 30px;
+            border: 1px solid red;
+            position: absolute;
+            left: -1px;
+            bottom: -35px;
+            transition: 1s;
+        }
+        .remove-box3 {
+            width: 50px;
+            height: 30px;
+            border: 1px solid red;
+            position: absolute;
+            top: 120px;
+            right: -54px;
+            transition: 1s;
+        }
+        .remove-box4 {
+            width: 50px;
+            height: 30px;
+            border: 1px solid red;
+            position: absolute;
+            top: 120px;
+            left: -53px;
+            transition: 1s;
+        }
+        .remove-text:hover .remove-box1 {
+            top: 95px;
+        }
+        .remove-text:hover .remove-box2 {
+            bottom: 15px;
+        }
+        .remove-text:hover .remove-box3 {
+            right: 95px;
+        }
+        .remove-text:hover .remove-box4 {
+            left: -1px;
+        }
+        .remove-text:hover {
+background: rgba(255, 255, 255, 0.166);        }
+    </style>
+</head>
+
+<body>
+    <div class="remove-text">
+        <div class="remove-box1"></div>
+        <div class="remove-box2"></div>
+        <div class="remove-box3"></div>
+        <div class="remove-box4"></div>
+    </div>
+</body>
+
+</html>

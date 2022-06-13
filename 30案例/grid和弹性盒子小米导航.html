@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(to right, skyblue, #fff);
+            text-decoration: none;
+            text-decoration-line: none;
+        }
+
+        .menu {
+            width: 230px;
+            height: 420px;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, .4);
+            margin: 50px 0px 0px 50px;
+            position: relative;
+        }
+
+        .menu .item {
+            padding-left: 30px;
+            height: 42px;
+            line-height: 42px;
+            font-size: 14px;
+            display: block;
+            color: #f7f6f7;
+        }
+
+        .menu .item:hover {
+            background: #fd6900;
+        }
+
+        .nav {
+            min-width: 0px;
+            height: 460px;
+            background: #fff;
+            box-shadow: 1px 2px 2px black;
+            position: absolute;
+            left: 230px;
+            top: 0;
+            display: grid;
+            grid-template-rows: repeat(6, 1fr);
+            /*行数*/
+            /* grid-template-columns: 250px; */
+            /*列数*/
+            grid-auto-flow: column;
+            /* 换列*/
+            grid-auto-columns: 250px;
+            /*隐式网格*/
+            display: none;
+        }
+
+        a {
+    
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: #fd6900;
+
+        }
+        .item:hover .nav{
+display:grid;        }
+      
+        
+        img{
+            padding-left: 20px;
+width: 40px;
+height: 40px;
+      margin-right: 20px;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="item">
+            手机
+            <div class="nav">
+                <a href=""> <img src="./xiaomi.nav/1.webp" alt="">Redmi Buds 4 Pro</a>
+                <a href=""> <img src="./xiaomi.nav/1.webp" alt="">Redmi Buds 4</a>
+                <a href=""> <img src="./xiaomi.nav/1.webp" alt="">Xiaomi 真无线降噪耳机 3</a>
+                <a href=""> <img src="./xiaomi.nav/1.webp" alt="">Redmi Buds 3 青春版</a>
+                <a href=""> <img src="./xiaomi.nav/1.webp" alt="">Redmi Buds 3</a>
+                <a href=""> <img src="./xiaomi.nav/1.webp" alt="">Xiaomi Sound</a>
+                <a href=""> <img src="./xiaomi.nav/2.webp" alt="">小爱触屏音箱Pro 8</a>
+                <a href=""> <img src="./xiaomi.nav/2.webp" alt="">Redmi小爱触屏音箱 8</a>
+                <a href=""> <img src="./xiaomi.nav/2.webp" alt="">小爱音箱 Pro</a>
+                <a href=""> <img src="./xiaomi.nav/2.webp" alt="">小米小爱音箱</a>
+                <a href=""> <img src="./xiaomi.nav/2.webp" alt="">小米小爱音箱 Play</a>
+                <a href=""> <img src="./xiaomi.nav/2.webp" alt="">小米小爱触屏音箱</a>
+                <a href=""> <img src="./xiaomi.nav/3.webp" alt="">Redmi音箱</a>
+                <a href=""> <img src="./xiaomi.nav/3.webp" alt="">线控耳机</a>
+                <a href=""> <img src="./xiaomi.nav/3.webp" alt="">蓝牙耳机</a>
+                <a href=""> <img src="./xiaomi.nav/4.webp" alt="">头戴耳机</a>
+                <a href=""> <img src="./xiaomi.nav/4.webp" alt="">品牌耳机</a>
+                <a href=""> <img src="./xiaomi.nav/4.webp" alt="">蓝牙音箱</a>
+                <a href=""> <img src="./xiaomi.nav/5.webp" alt="">小米AI音箱</a>
+                <a href=""> <img src="./xiaomi.nav/5.webp" alt="">小米小爱音箱HD</a>
+            </div>
+        </div>
+        <div class="item">电视</div>
+        <div class="item">笔记本平板</div>
+        <div class="item">出行穿戴</div>
+        <div class="item">耳机音箱</div>
+        <div class="item">家电</div>
+        <div class="item">智能路由器</div>
+        <div class="item">电源配件</div>
+        <div class="item">健康儿童</div>
+        <div class="item">生活箱包</div>
+    </div>
+</body>
+
+</html>

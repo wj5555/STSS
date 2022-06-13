@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- while语句可以在条件表达式为真的前提下,循环执行指定的一段代码,直到表达式不为真时结束循环 -->
+
+    <!-- while语句的语法结构如下:
+
+    while(条件表达式){
+        //循环体代码
+    } -->
+
+    <!-- 执行思路:
+    先执行条件表达式,如果结果为true,则执行循环体代码; 如果结果为false,则退出循环, 执行后面的代码;
+    执行循环体代码;
+    循环体执行代码完毕后, 程序会继续判断执行条件表达式, 如果条件仍为true,则会继续执行循环体,直到循环条件
+    为false时,整个循环过程才会结束; -->
+
+    <script>
+        var num = 1;       //定义一个num计数器即初始化变量
+        while(num <= 10){      //最多执行10次
+            alert('hello world' + ' ' + num);
+            // console.log('hello world');
+            num++;  //每次执行完log后,计数器会自加1
+        }
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

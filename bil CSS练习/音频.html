@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- audio
+        controls是否允许用户控制
+        autoplay自动播放
+        loop循环播放
+        preload 预载
+        
+     -->
+     <audio src="月光.flac" controls autoplay loop></audio>
+     <!-- 也可以通过source 不支持老浏览器 -->
+     <audio controls>
+         <source src="月光.flac">
+         <source>
+     </audio>
+
+     <embed src="" type="audio/mp3">
+        <!-- embed  IE8以下 -->
+    
+    <!-- video
+        controls是否允许用户控制
+        autoplay自动播放
+        loop循环播放
+        preload 预载
+        poster 缓冲不足显示图像
+     -->
+    <video src="" controls></video>
+    <video controls>
+        <source src="">
+        <source>
+    </video>
+    <embed src="" type="video/mp4">
+        <!-- embed  IE8以下 -->
+</body>
+</html>

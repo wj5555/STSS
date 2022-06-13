@@ -1,0 +1,12 @@
+.droplist::after{
+            content:'';
+            width: 0;
+            height: 0;
+            border: 10px  solid transparent;
+            border-color:  white transparent;
+
+            border-top: none;
+            position: absolute;
+            top: 20px;
+            left:30px
+        }

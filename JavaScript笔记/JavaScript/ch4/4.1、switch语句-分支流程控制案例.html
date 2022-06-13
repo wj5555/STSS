@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 用户在弹出框里面输入一个水果,如果有就弹出该水果的价格,没有就弹出"没有此水果" -->
+
+    <!-- 分析:
+    弹出prompt输入框,让用户输入水果名称,把这个值取过来保存到变量中
+    将这个变量作为switch括号里面的表达式
+    csae后面的值写几个不同的水果名称,注意一定要加引号,因为必须是全等匹配
+    弹出不同的价格,注意每个case之后加上break,以便退出switch语句
+    将default设置为没有此水果 -->
+
+
+    <script>
+
+        var fruit = prompt('请您输入查询的水果:');
+        switch(fruit) {
+            case '苹果':
+                alert('苹果的价格是 3.5元/斤');
+                break;
+            case '榴莲':
+                alert('榴莲的价格是 5元/斤');
+                break;
+            case '橘子':
+                alert('橘子的价格是 2.5元/斤');
+                break;
+            case '香蕉':
+                alert('香蕉的价格是 3元/斤');
+                break;
+            default:
+                alert('查询没有结果');
+        }
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

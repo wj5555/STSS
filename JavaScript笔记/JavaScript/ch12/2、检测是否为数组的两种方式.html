@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 【方法是数组中的内置对象】 -->
+
+    <script>
+
+        //翻转数组 前面的ch6-10学的
+        function reverse(arr){
+            var newArr = [];
+            for(var i = arr.length - 1; i >= 0; i--){
+                newArr[newArr.length] = arr[i];
+            }
+            return newArr;
+        }
+        console.log(reverse([1,2,3,4,5]));   //控制台刷新两遍就可以看具体数组里面的元素,方便看是否翻转
+
+        console.log(reverse(1,2,3,4,5));    //传入的参数不是数组,无法执行for里面的,直接输出13行里的空数组
+
+
+
+
+        // 根据以上的了解,先确认用户传进去的参数是不是数组,对于已经封装好的数组函数来说很重要
+        // 即 检测是否为数组很重要
+
+
+
+
+        // 检测是否为数组的第一种方法:
+        // instanceof 是一个运算符,它可以用来检测是否为数组
+        var arr = [];    //先声明一个数组
+        var obj = {};    //再声明一个对象,来对比一下
+        console.log(arr instanceof Array);  //检测arr是否属于Array，即是否属于数组。 输出true
+        console.log(obj instanceof Array);  //检测arr是否属于Array，即是否属于数组。 输出false
+
+
+
+
+        // 【即上面的翻转函数准确来说应该是如下写法】
+        //翻转数组
+        function reverse(arr){
+            if(arr instanceof Array){        //再外层加一个条件,当用户输入数组时才会执行for
+                var newArr = [];
+                for(var i = arr.length - 1; i >= 0; i--){
+                    newArr[newArr.length] = arr[i];
+                }
+                return newArr;
+            } else {
+                return '这个参数要求必须是数组格式';
+            }
+            
+        }
+        console.log(reverse([1,2,3,4,5]));   //控制台刷新两遍就可以看具体数组里面的元素,方便看是否翻转
+
+        console.log(reverse(1,2,3,4,5));    //传入的参数不是数组,无法执行for里面的,直接输出13行里的空数组
+
+
+
+
+
+
+
+
+        // 检测是否为数组的第二种方法:
+        // Array.isArray()   H5新增的方法,ie9以上版本才支持
+        //建议在MDN文档里搜索Array.isArray(),了解相关用法。或搜索Arry,再在左侧栏的方法里面,找到并点击Array.isArray()
+        
+        // 用法
+        // Array.isArray() 用于确定传递的值是否是一个 Array。
+
+        // Array.isArray([1, 2, 3]);  // true
+        // Array.isArray({foo: 123}); // false
+        // Array.isArray('foobar');   // false
+        // Array.isArray(undefined);  // false
+
+        console.log(Array.isArray(arr));   //这个arr是共用上面翻转数组里面的arr  输出true
+        console.log(Array.isArray(obj));   //这个obj是共用上面35行的obj,obj为对象不是数组   输出false
+
+
+
+
+
+
+        // Array.isArray()的优先级比instanceof高
+
+
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

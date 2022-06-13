@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- 运算符(operator)也被称为操作符,是用于实现赋值、比较、执行算数运算符,等功能的符号
+
+    JavaScript中常用的运算符有算数运算符、递增和递减运算符、比较运算符、逻辑运算符、赋值运算符 -->
+
+
+
+    <!-- 算数运算符: 用于执行两个变量或值的算数运算
+
+    运算符          描述             实例
+
+    +              加               18 + 18 = 36
+
+    -              减               18 - 24 = -6
+
+    *              乘               18 * 2 = 36
+
+    /              除               36/2 = 18
+
+    %              取余数(取模)      22%6 = 4 -->
+    
+    
+
+
+    <!-- 浮点数的精度问题
+    浮点数值的最高精度是17位数,但在进行算数计算时其精度远远不如整数 -->
+
+
+
+
+    <!-- 判断一个数能够被整除,即这个数的余数是0,就说明这个数能被整数,这也是取余运算的主要用途 -->
+
+
+
+
+    <script>
+
+        console.log(18 + 18);           //输出结果是36
+        console.log(18 - 24);           //输出结果是-6
+        console.log(18 * 2);            //输出结果是36
+        console.log(36 / 2);            //输出结果是18
+        console.log(22 % 6);            //输出结果是4
+        console.log(1 + 2 * 3);         //输出结果是7
+
+        console.log(0.1 + 0.2);         //浮点数参与算数运算会有误差,输出结果是0.3000000000000004
+        console.log(0.02 * 100);        //浮点数参与算数运算会有误差,输出结果是2.0000000000000001
+
+        var num = 0.1 = 0.2;
+        console.log(num == 0.3);        //双等号是用来判断是否相等,即num是否等于0.3，输出结果是false,即不相等
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

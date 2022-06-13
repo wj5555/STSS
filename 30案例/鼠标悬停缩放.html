@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .clearfix::after
+    .clearfix::before{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .scale{
+        width: 800px;
+        height: 200px;
+        border: 1px solid black;
+    }
+    .scale .item img{
+        width: 200px;
+        height: 200px;
+        margin-right: 40px;
+        transition: .5s;
+    }
+    .item{
+        height: 200px;
+        width: 200px;
+        float: left;
+        margin: 0 33px;
+        overflow: hidden;
+        position: relative;
+    }
+    .item:hover img{
+    transform: scale(1.2);
+    }
+    .out-img{
+        border: 4px solid #fff;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        transition: .5s;
+        box-shadow: 0 0 0 40px rgba(255, 255, 255, 0.7);
+    }
+    .item:hover .out-img{
+    transform: scale(.7);
+    background: rgb(0, 0, 0,.5);
+    }
+    .out-text{
+        width: 100%;
+        height: 120px;
+        margin-top: 50px;
+        
+    }
+    .out-img p{
+        color: #fff;
+        font-size: smaller;
+        opacity: 0;
+    transition: .5s;
+    }
+    .out-img p:nth-child(1){
+   font-size: 20px;
+        font-weight: bold;
+       
+    }
+
+    .item:hover .out-img p{
+        
+        opacity: 1;
+    }
+</style>
+<body>
+    <div class="scale ">
+        <div class="item">
+            <img src="../QQ音乐/img/头像.jpg" alt="" />
+            <div class="out-img">
+                <div class="out-text"><p>李太白</p>
+                <p>君不见黄河之水天上来，奔流到海不复回。
+                    君不见高堂明镜悲白发，朝如青丝暮成雪。
+                    人生得意须尽欢，莫使金樽空对月。
+                    天生我材必有用，千金散尽还复来。</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="../QQ音乐/img/头像.jpg" alt="" />
+            <div class="out-img"><div class="out-text"><p>李太白</p>
+                <p>君不见黄河之水天上来，奔流到海不复回。
+                    君不见高堂明镜悲白发，朝如青丝暮成雪。
+                    人生得意须尽欢，莫使金樽空对月。
+                    天生我材必有用，千金散尽还复来。</p>
+                </div></div>
+        </div>
+        <div class="item">
+            <img src="../QQ音乐/img/头像.jpg" alt="" />
+            <div class="out-img"><div class="out-text"><p>李太白</p>
+                <p>君不见黄河之水天上来，奔流到海不复回。
+                    君不见高堂明镜悲白发，朝如青丝暮成雪。
+                    人生得意须尽欢，莫使金樽空对月。
+                    天生我材必有用，千金散尽还复来。</p>
+                </div></div>
+        </div>
+    </div>
+</body>
+
+</html>

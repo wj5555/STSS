@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- 拼接以及截取字符串
+
+    方法名                        说明
+
+    concat(str1,str2,str3…)       用于连接两个或多个字符串,拼接字符串,等效于+, +更常用
+
+    substr(start,length)          从start位置开始(索引号), length取的个数, 重点学这个方法
+
+    slice(start,end)              从start位置开始, 截取到end位置, end取不到(他们俩都是索引号)
+
+    substring(start,end)          从start位置开始, 截取到end位置, end取不到 基本和slice相同,但不接受负值 -->
+
+
+    <script>
+
+        // 字符串操作方法
+        // 1、concat('字符串1','字符串2',…)
+        var str = 'andy';
+        console.log(str.concat('red'));  //输出andyred
+
+        //2、substr('截取的起始位置','截取几个字符')
+        var str1 = '乘风破浪会有时';  //如何把'破浪'截取出来
+        console.log(str1.substr(2,2));  //从索引号为2的位置,往后截取2个元素, 输出'破浪'
+
+        var str2 = '直挂云帆济沧海';  //如何截取'济沧海'
+        console.log(str2.slice(4,7));  //截取索引号[4,7)的元素,包含4不含7
+        console.log(str2.slice(-7,-3)); //'-7,-6,-5,-4,-3,-2,-1' 把[-7,-3)的元素取出来,即输出'直挂云帆'
+
+        var str3 = '若是春天花自开';  //如何截取'春天'
+        console.log(str3.substring(2,4));  //截取索引号[2,4)的元素,包含2不含4
+        console.log(str3.substring(-7,-3));  //没有输出也不报错, 即不接收负值
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

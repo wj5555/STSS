@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style type="text/css">
+        body{
+            background-image: url("1026345.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+        .nav {
+            min-width: 600px;
+            position: fixed;
+            height: 30px;
+            background:
+                -webkit-linear-gradient(top, rgba(251, 7, 7, 0.448) 2%, rgb(4, 139, 230) 100%);
+            box-shadow: 0 1px 2px;
+            z-index: 5;
+            left: 0;
+            width: 100%;
+
+        }
+
+
+        .dlist {
+            float: left;
+            width: 100px;
+            line-height: 30px;
+            text-align: center;
+
+        }
+
+        .navlist a {
+            display: block;
+            color: #fff;
+            font-size: 1px;
+            border-radius: 5px;
+            overflow: hidden;
+            
+
+        }
+
+        .navlist a:hover {
+            background: rgb(180, 211, 246);
+        }
+
+        .droplist {
+            background: rgb(190, 190, 190);
+            box-shadow: 0 1px 2px;
+            display: none;
+            border-radius: 5px;
+
+        }
+
+
+        .dlist:hover .droplist {
+            display: block;
+            background:
+                -webkit-linear-gradient(top, rgba(251, 7, 7, 0.448) 2%, rgb(4, 139, 230) 100%);
+            
+        }
+       
+        .user,
+        .register,
+        .login {
+            float: right;
+            line-height: 30px;
+            
+        }
+        .user{
+        overflow:hidden
+        }
+
+        .register,
+        .login {
+            margin: 0 10px;
+        }
+
+        .user a {
+            display: block;
+            color: #fff;
+            font-size: 2px;
+            border-radius: 5px;
+        }
+
+        .user a:hover {
+            background: rgb(212, 212, 212);
+        }
+
+
+
+        .box {
+            height: 5000px;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="dh">
+        <div class="nav">
+            <ul class="navlist">
+                <li class="dlist"><a href="#">我是导航</a>
+                    <ul class="droplist">
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dlist"><a href="#">我是导航</a>
+                    <ul class="droplist">
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                    </ul>
+                </li>
+                <li class="dlist"><a href="#">我是导航</a>
+                    <ul class="droplist">
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                    </ul>
+                </li>
+                <li class="dlist"><a href="#">我是导航</a>
+                    <ul class="droplist">
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                    </ul>
+                </li>
+                <li class="dlist"><a href="#">我是导航</a>
+                    <ul class="droplist">
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                        <li><a href="#">下拉菜单</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="user">
+                <li class="login"><a href="#">登录</a></li>
+                <li class="register"><a href="#">注册</a></li>
+            </ul>
+            
+        </div>
+    </div>
+</body>
+</html>

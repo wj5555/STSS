@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //利用函数求两个数的和
+        function getSum(num1,num2){     //求两个数的和，需要两个形参     注意这里是getSum
+            console.log(num1 + num2);
+        }
+        getSum(1,3);       //1和3分别作为num1和num2的形参1
+        getSum(1,4);       //1和3分别作为num1和num2的形参2
+
+
+
+
+        //利用函数求两个数之间的累加和
+        function getSums(start,end){           //注意这里是getSums
+            var sum = 0;
+            for(var i = start; i <= end; i++){
+                sum += i;
+            }
+            alert(sum);
+        }
+        getSums(1,100);
+        getSums(50,100);
+
+
+
+
+        //运用函数返回值的知识写完整的两数相加之和
+        function getSum(num3,num4){
+            return num3 + num4;
+        }
+        console.log(getSum(2,8));
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 【方法是数组中的内置对象】 -->
+
+    <!-- 建议在MDN文档里搜索Array,了解相关用法 -->
+    
+    <!-- 创建数组的两种方式: 字面量方式   newArray() -->
+
+
+
+    <script>
+
+        // 字面量方式创建数组
+        var arr = [1,2,3,4,5];
+        console.log(arr[0]);   //输出1
+
+
+
+        // new Array()创建数组,常用于构造函数。里面写一个数表示数组长度，此时数组内部没有元素;写两个数才是创建数组的2个变量
+        //var arr1 = new Array();  //创建空数组
+        var arr1 = new Array(2);   //长度为2,里面有两个空元素,即两个empty。 并不是创建数组元素,而是创建了空数组
+        console.log(arr1);         //输出2个empty
+
+        var arr2 = new Array(2,3);   //数组里面有两个元素,分别为2、3 。创建数组
+        console.log(arr2);          //输出2、3
+
+        var arr3 = new Array(1);  //写单个数字仅仅表示数组长度，但是如何表示创建单个数字变量呢
+        arr3[0] = 6;              //很简单,把数组里的第一个索引值赋值为单个数字就可以了
+        console.log(arr3);        //输出6
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

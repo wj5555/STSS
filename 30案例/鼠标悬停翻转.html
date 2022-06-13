@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .scene {
+            width: 400px;
+            height: 300px;
+            border: 1px solid red;
+            margin: 100px auto 0;
+            perspective: 800px;
+        }
+        .scene .scene-box{
+            width: 400px;
+            height: 300px;
+            background: yellow;
+            transition: all ease 1s;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        .scene:hover .scene-box{
+            transform: rotateY(-180deg);
+        }
+        .scene .scene-box .box-front{
+            width: 400px;
+            height: 300px;
+            background: pink;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+        }
+        .scene .scene-box .box-back{
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+          
+            transform: translateZ(-100px) rotateY(180deg);
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="scene">
+<div class="scene-box">
+    <div class="box-front">1</div>
+    <div class="box-back">2</div>
+</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var str1 = '';
+        for(var i = 1; i <= 10; i++){         //i是行数
+            for(var j = i; j <= 10; j++){     //j是星数,当i=1时,即j=1,因为j此时小于等于10,所以执行下面的打印星星,执行完之后j+1变成2
+                str1 = str1 + '☆';
+            }
+            str1 += '\n';    //打印完一行星星后自动换行
+        }
+        alert(str1);
+
+        var str2 = '';
+        for(var n = 1; n <= 9; n++){     //外层循环控制行数
+            for(var m = 1; m <= n; m++){     //里层循环控制每一行的个数
+                str2 = str2 + '☆';
+            }
+            str2 += '\n';    //打印完一行会自动换行
+        }
+        alert(str2);
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

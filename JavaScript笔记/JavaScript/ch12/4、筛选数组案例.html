@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 有一个包含工资的数组[1500,3000,2800,1200,2100,1800],要求把数组中工资超过2000的删除,剩余的放到新数组里面 -->
+
+    <!-- 要求: 有一个包含工资的数组[1200,2900,1400,1200,2200,1700],要求把数组中工资超过2000的删除,剩余的放到新数组里面 -->
+
+    <script>
+
+        // 利用索引号把满足条件的数组元素添加到新数组
+        var arr = [1500,3000,2800,1200,2100,1800];
+        var newArr = [];   //创建一个空数组
+        for(var i = 0; i < arr.length; i++){
+            if(arr[i] < 2000){   //如果遍历到数组里面的元素小于2000,就留下,且存到新数组
+                newArr[newArr.length] = arr[i];//newArr.length新数组索引从0开始,把满足条件的右边元素都赋值给左边
+            }
+        }
+        console.log(newArr);    //输出[1500, 1200, 1800]
+
+
+
+        
+        // 利用push把满足条件的数组元素添加到新数组
+        var arr2 = [1200,2900,1400,1200,2200,1700];
+        var newArr2 = [];   //创建一个空数组
+        for(var i = 0; i < arr2.length; i++){
+            if(arr2[i] < 2000){   //如果遍历到数组里面的元素小于2000,就留下,且存到新数组
+                newArr2.push(arr2[i]);  //可以在数组的末尾添加一个或多个新的元素 。更简单
+            }
+        }
+        console.log(newArr2);   //输出[1200, 1400, 1200, 1700]
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

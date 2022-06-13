@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 案例: 倒计时效果 -->
+
+    <!-- 分析
+    1、核心算法:输入的时间减去现在的时间就是剩余的时间,即倒计时,注意不能直接拿时分秒相减,比如05分减去25分,结果是负数的
+    2、不能直接拿时分秒相减。那么就可以用总毫秒来相减,简称时间戳(毫秒数)
+    3、用时间戳来做,用户输入时间总的毫秒数减去现在时间的总的毫秒数,得到的就是剩余时间的毫秒数
+    4、把剩余时间总的毫秒数转换为天、时、分、秒。即时间戳转换为时分秒
+
+    转换公式如下:
+    1、  d = parseInt(总秒数/60/60/24);   //计算天数 
+    2、  h = parseInt(总秒数/60/60%24);   //计算小时
+    3、  m = parseInt(总秒数/60%60);      //计算分数
+    4、  s = parseInt(总秒数%60);         //计算当前秒数 -->
+
+
+
+    <script>
+
+        function countDown(time){     //封装函数。 countDown的意思是倒计时
+           var nowTime =  +new Date();//+new Date()不写参数返回的是当前时间总的毫秒数。把值赋值给左边的变量nowTime
+           var inputTime = +new Date(time);//把用户的参数放进去,返回的是用户输入时间总的毫秒数。把值赋值给左边的变量inputTime
+           var times = (inputTime - nowTime) / 1000;
+           //两组毫秒相减,值赋值给左边,times就是剩余时间总的毫秒数。除以一千就把毫秒数转换为秒数
+
+           //var d = parseInt(剩余总秒数 / 60 / 60 / 24);    parseInt将字符串转换为整数  d是天数
+           var d = parseInt(times / 60 / 60 / 24); //计算天数
+           d = d < 10 ? '0' + d : d;
+           //如果数字小于10就前面补0,如果数字不小于10就正常输出。 最后把右边三目运算符的值赋值给左边
+
+           var h = parseInt(times / 60 / 60 % 24); //计算小时
+           h = h < 10 ? '0' + h : h;
+           //如果数字小于10就前面补0,如果数字不小于10就正常输出。 最后把右边三目运算符的值赋值给左边
+
+           var m = parseInt(times / 60 % 60); //计算分数
+           m = m < 10 ? '0' + m : m;
+           //如果数字小于10就前面补0,如果数字不小于10就正常输出。 最后把右边三目运算符的值赋值给左边
+
+           var s = parseInt(times % 60);         //计算当前秒数
+           s = s < 10 ? '0' + s : s;
+           //如果数字小于10就前面补0,如果数字不小于10就正常输出。 最后把右边三目运算符的值赋值给左边
+
+           return d + '天' + h + '时' + m + '分' + s + '秒';  //返回值
+        }
+        console.log(countDown('2022-6-1 18:00:00'));  //调用输出,输入一个未来时间输出还多久到达
+
+        var date = new Date();   //不写参数
+        console.log(date);       //输出当前时间
+
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 将数组['1','2','3','4','5']的内容反过来存放 -->
+
+    <!-- 输出: ['5','4',,'3','2','1'] -->
+
+    <!-- 分析:
+    声明一个新数组newArr
+    把旧数组索引号的第4个取过来(arr.length -1),给新数组索引号第0个元素(newArr.length)
+    采取递减的方式 i-- -->
+
+    <script>
+
+        var arr = ['1','2','3','4','5'];
+        var newArr = [];
+        for(var i = arr.length -1; i >= 0; i--){      //写的时候注意索引号比数组元素少1
+            newArr[newArr.length] = arr[i]  //newArr.length新数组一开始是没有的,此时newArr.length长度(索引号)为0
+            // 当右边的值赋值到左边时, newArr.length就会从0加到4,即新数组存了5个变量
+        }
+        console.log(newArr);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 求1~100之间所有整数的累加和 -->
+
+
+    <!-- 分析:
+    需要循环100次,我们需要一个计数器
+    我们需要一个储存结果的变量sum,但是初始值一定是0
+    核心算法: 1 + 2 + 3 + 4…，sum = sum + i;    第二次执行的时候,右边的sum为2、i为1,右边之和为3,再把3赋值给左边的sum -->
+
+
+    <!-- 分析:
+    1 + 2 + 3 + 4 + 5
+        3 + 3
+            6 + 4
+                10 + 5
+                sum + i
+            sum=sum + i -->
+
+
+
+    <script>
+
+        var sum = 0;
+        for(var i = 1; i <= 100; i++){
+            //sum = sum + i;
+            sum += i;             //sum = sum + i 的简写
+        }
+        console.log(sum);
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

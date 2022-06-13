@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 建议在MDN文档里搜索Date,了解相关用法 -->
+
+    <!-- Date() 日期对象 是一个构造函数 必须使用new来调用创建日期对象 -->
+
+    <!-- Date对象和Math对象不一样,Date对象是一个构造函数,所以需要实例化后才能使用 -->
+
+    <script>
+
+        var arr = new Array();   //new创建一个数组对象
+        var obj = new Object();  //new创建了一个对象实例  new实例化
+
+        var date = new Date();  //没有参数,如果没有提供参数，那么新创建的Date对象表示实例化时刻的日期和时间
+        console.log(date);
+
+        //参数常用的写法 数字型 2022,5,23
+        var date1 = new Date(2019,5,23);
+        console.log(date1);  //输出Sun Jun 23 2019 00:00:00 GMT+0800 (中国标准时间)。Jun是6月,不是我们要的5月
+
+        // 参数常用的写法 字符串型 '2022-5-3 22:36:59'
+        var date2 = new Date('2022-5-3 22:36:59');
+        console.log(date2);    //输出的结果跟设定的一样
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

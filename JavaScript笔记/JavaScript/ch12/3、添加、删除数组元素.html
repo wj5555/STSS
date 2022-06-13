@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 【方法是数组中的内置对象】 -->
+
+    <!-- 添加或删除数组元素的方法
+
+    方法名             说明                                                   返回值
+
+    push(参数1…)       可以在数组的末尾添加一个或多个新的元素,注意修改原数组      并返回新的长度
+
+    pop()              删除数组最后一个元素,把数组长度减1,无参数,修改原数组      返回它删除的元素的值
+
+    unshift(参数1…)    向数组的开头添加一个或更多元素,注意修改原数组             并返回新的长度
+
+    shift()            删除数组的第一个元素,数组长度减1,无参数,修改原数组        并返回第一个元素 -->
+
+
+    <script>
+        var arr = [1,2,3];
+        arr.push(4,'好好学哦');    //把4和字符串添加(追加)到arr数组里面,在末尾加
+        console.log(arr);   //输出[1,2,3,4]   在控制台刷新两次就可以看到数组元素
+
+
+        var arr2 = [11,12,13];
+        console.log(arr2.push(14,'什么原因'));//仅仅输出数组长度,输出5 。说明push完毕之后返回的结果是新数组的长度
+        console.log(arr2);        //输出数组元素,共5个
+        
+
+        var arr3 = [10,100,100];   //数字不用加引号,非数字需要加单引号
+        arr3.unshift('red');     //在数组前面添加一个新元素
+        console.log(arr3);      //输出数组元素,共4个
+        console.log(arr3.unshift('又是什么原因'));//仅仅输出数组长度,输出5 。说明unshift完毕之后返回的结果是新数组的长度
+    
+
+
+
+
+        var arr4 = [11,22,33,44,'我被删除了'];
+        console.log(arr4.pop());  //输出"我被删除了"即输出末尾删除的元素。输出这行的时候已经把原数组最后一个删了
+        // 此时现有数组元素为[11,22,33,44]
+
+        arr4.pop();    //不需要写参数,删除现有数组最后一个元素,此时数组为[11,22,33]
+        console.log(arr4);  //输出数组[11,22,33]
+
+        console.log(arr4.pop());  //输出33。 说明pop返回的结果(值)是末尾被删除的最后一个元素
+        // 输出33,执行上面那行的时候会把原数组最后一个删了,此时现有数组为[11,22]
+        console.log(arr4);   //输出[11,22]
+
+        console.log(arr4.pop());  //输出22。 说明pop返回的结果(值)是被删除的元素
+        // 执行上面那行的时候会把原数组最后一个删了,此时现有数组为[11]
+        console.log(arr4);   //输出[11]
+
+
+
+
+
+        var arr5 = ['a','b','c','d'];
+        console.log(arr5.shift());  //输出(返回的值)是a",即返回的是开头被删除的第一个元素
+        // 此时数组里面为['b','c','d']
+        console.log(arr5);  //输出['b','c','d'];
+
+        arr5.shift();   //不需要写参数。删掉现有数组里面开头的第一个元素
+        console.log(arr5);  //输出['c','d'];
+        
+    
+    
+    </script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+      .eat-peas{
+        width:600px;
+        height: 200px;
+        background: rgb(245, 150, 150);
+        margin: auto auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+    }   
+    .eat-body{
+        width: 200px;
+        height: 200px;
+        border: 1px solid rebeccapurple;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .peat{
+        height: 30px;
+        width: 30px;
+        background: #7bbdff;
+        border-radius: 50%;
+position: absolute;
+top: 85px;
+left: 200px;
+box-shadow: 70px 0 0 #7bbdff,140px 0 0 #7bbdff,210px 0 0 #7bbdff,280px 0 0 #7bbdff,350px 0 0 #7bbdff;
+animation:move 1s ease infinite;
+    }
+
+    .eyes{
+        height: 30px;
+        width: 30px;
+        background: rgb(19, 19, 19);
+        position: absolute;
+        top: 30px;
+        left: 85px;
+        border-radius: 50%;
+        border: 3px solid rgb(192, 190, 190);
+    }
+    .eat-peas .eat-body::before{
+        content: '';
+        display: block;
+        width: 200px;
+        height: 100px;
+        background: yellow;
+        transform-origin: bottom center;
+        transform: rotate(0deg);
+        animation: peat .5s ease infinite alternate;
+
+    }
+    .eat-peas .eat-body::after{
+        content: '';
+        display: block;
+
+        width: 200px;
+        height: 100px;
+        background: red;
+        transform-origin: top center;
+
+        transform: rotate(0deg);
+        animation: peat2 .5s ease infinite alternate;
+
+    }
+    @keyframes peat {
+        0%{
+            transform: rotate(0deg);
+
+        }100%{
+            transform: rotate(-30deg);
+
+        }
+    }
+    @keyframes peat2 {
+        0%{
+            transform: rotate(0deg);
+
+        }100%{
+            transform: rotate(30deg);
+
+        }
+    }
+    @keyframes move {
+        0%{
+transform: translateX(0);
+        }100%{
+            transform: translateX(-70px);
+
+        }
+    }
+    </style>
+   
+</head>
+<body>
+    <div class="eat-peas">
+        <div class="peat"></div>
+        <div class="eat-body">
+           <div class="eyes"></div>
+
+        </div>
+    </div>
+</body>
+</html>

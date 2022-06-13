@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 原理跟前面学的创建数组new Array()的原理一致  -->
+
+    <!-- 利用new Object创建对象: 一次只能创建一个对象 -->
+
+    <script>
+
+        var obj = new Object();    //创建了一个空的对象
+        obj.uname = '张三';   //追加名字属性
+        obj.age = 18;        //追加年龄属性
+        obj.sex = '男';     //追加性别属性
+        obj.sayHi = function(){     //追加方法
+            console.log('hi');
+        }
+
+        /* 注意:
+        1、等号(=)赋值的方法添加对象的属性和方法
+        2、每个属性和方法之间用分号结束 */
+
+        
+        //调用属性
+        console.log(obj.uname);       //输出张三
+        console.log(obj['sex']);      //输出男
+
+        //调用方法
+        obj.sayHi();          //输出hi
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

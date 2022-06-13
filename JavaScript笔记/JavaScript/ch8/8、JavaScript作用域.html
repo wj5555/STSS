@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 作用域(es6): 通常来说,一段程序代码中所用到的名字并不总是有效和可用的,而限定这个名字的可用性的代码范围就是这个
+    名字的作用域,作用域的使用提高了程序逻辑的局部性,增强了程序的可靠性,减少了名字冲突 -->
+
+    <!-- 简单来说就是代码名字(变量)在某个范围内起作用和效果 -->
+
+    <!-- 作用域分为全局作用域和局部作用域 -->
+
+
+
+    <script>
+        // 全局作用域: 整个script标签都会起作用、或者是单独的js文件
+        var num = 10;
+        console.log(num);    //输出20
+
+
+
+
+        //局部作用域(函数作用域): 这个代码的名字只在函数内部起作用和效果
+        function fn(){
+            var num = 20;
+            console.log(num);
+        }
+        fn();   //要想输出就需要有这行的调用   输出20
+
+
+
+        // 【减少了命名冲突, 同样是命名了num，但是执行的时候不冲突】
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

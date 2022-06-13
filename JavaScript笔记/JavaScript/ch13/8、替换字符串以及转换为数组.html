@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // 1、替换字符 replace('替换谁','替换成什么') 。一次只能替换一个
+
+        var str = 'abcd';
+        console.log(str.replace('a','b'));   //把a替换成b,输出bndy
+
+        var str1 = 'abcdabcd';
+        console.log(str1.replace('a','b'));  //多个'a'时,只替换前面第一个a,输出bbcdabcd
+
+        // 案例: 把字符串'helloworldhelloworld'里面所有的o替换为*号。 应用范围:敏感词过滤
+        var str2 = 'helloworldhelloworld';
+        while(str2.indexOf('o') !== -1){    //如果查找到'o'不等于-1,即一直能查找到'o'这个元素,就执行大括号里面
+            str2 = str2.replace('o','*')  //把'o'替换成'*'号。 当上面那行查找到'o'等于-1时,即已经没有'o'元素,结束循环
+        }  //上一行把右边的值赋值给左边的变量
+        console.log(str2);  //输出这个变量
+
+
+
+
+
+
+        // 2、字符转换为数组 split('分隔符')
+        // 前面学过join,也可以把数组转换为字符串
+
+        var str3 = 'one,two,three,four,five,six';  //如何把六个字符串转换为数组
+        console.log(str3.split(','));  //原数组分隔符用的是逗号,这里也要用逗号。就可以输出一个数组了
+
+        var str4 = '1&2&3&4&5&6'; //这个原数组用的分隔符是&
+        console.log(str4.split('&'));  //注意分隔符统一, 输出['1', '2', '3', '4', '5', '6']
+
+
+
+
+
+
+
+        /* 额外需要掌握
+        toUpperCase()  //转换大写
+        toLowerCase()  //转换小写
+        课后掌握 */
+
+
+
+        
+
+    
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function Star(uname,age,sex){
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(sang){
+                console.log(sang);
+            }
+        }
+        var test = new Star('小帅','99','男');
+        console.log(test.age);    //没有这行就不会输出
+
+
+
+        // 分析:
+        // 1、new构造函数在内存中创建了一个空的对象
+        // 2、this就会指向刚才创建的空对象
+        // 3、执行构造函数里面的代码,给这个空对象添加属性和方法
+        // 4、new就会返回这个对象(不需要使用return,因为new的作用就有返回的作用,相当于有了return)
+
+    </script>
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

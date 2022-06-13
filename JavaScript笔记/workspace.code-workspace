@@ -1,0 +1,17 @@
+{
+    "folders": [
+		{
+			"path": "..\\练习"
+		},
+		{
+			"path": "..\\QQ音乐"
+		},
+		{
+			"path": "."
+		}
+	],
+    "settings": {
+		"liveServer.settings.multiRootWorkspaceName": "JavaScript笔记",
+		"liveServer.settings.port": 5501
+    }
+}

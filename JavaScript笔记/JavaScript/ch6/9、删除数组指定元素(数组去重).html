@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 将数组[2,0,6,1,77,0,52,0,25,7]中的0去掉后,形成一个不包含0的新数组 -->
+
+    <!-- 分析:
+    需要一个新数组用于存放筛选之后的数据
+    遍历原来的数组,把不等于0的数据添加到新数组里面(此时要注意采用数组名+索引的格式接收数据)
+    新数组里面的个数,用length不断累加 -->
+
+    <script>
+
+        var arr = [2,0,6,1,77,0,52,0,25,7];
+        var newArr = [];
+        for(var i = 0; i < arr.length; i++){
+            if(arr[i] != 0){        //当遍历到原数组里面的不等于0的变量时,就执行大括号里面的
+                newArr[newArr.length] = arr[i];   //把右边满足条件的变量都存到左边的新数组
+            }
+        }
+        console.log(newArr);      //输出的结果是从原数组里筛选出的不包括0的新数组
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

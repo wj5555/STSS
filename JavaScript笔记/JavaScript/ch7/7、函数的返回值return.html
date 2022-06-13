@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- return语句: 函数将数值返回给调用者 -->
+
+    <script>
+
+        function cook1(aru1){
+            console.log(aru1);    //函数结果在内部输出, 不提倡, 而是推荐把结果返回给函数的调用者
+        }
+        cook1('青椒炒肉');
+
+
+
+        function getResult(){
+            return 123;        //不能英文和中文  ，  输出结果是代码而不是只有123
+        }
+        getResult();       //函数调用者
+        console.log(getResult);  //输出结果
+
+
+
+        function cook2(aru2){     //cook里面可以接一个参数
+            return aru2;         //返回这个aru2的参数,即函数结果返回给函数的调用者, x
+        }
+        console.log(cook2('剁椒鱼头'));   //函数的调用者,把值放进cook2函数的参数里面
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

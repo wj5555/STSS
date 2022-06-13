@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\QQ音乐"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "练习"
+    }
+}

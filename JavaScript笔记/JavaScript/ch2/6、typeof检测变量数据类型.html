@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 获取检测变量的数据类型
+    typeof可用来获取检测变量的数据类型 -->
+    
+
+
+    <script>
+
+        var num = 10;
+        console.log(typeof num);        //typeof是关键字 检测num这个变量是什么类型 输出结果为number，即数字型
+
+        var str = 'Mary';
+        console.log(typeof str);        //检测str是什么变量  输出结果是string，即字符串型
+
+        var flag = true;
+        console.log(typeof flag);      //输出结果是boolean,即布尔型
+
+        var vari = undefined;          //undefined是未定义
+        console.log(typeof vari);      //输出结果是undefined,即未定义类型
+
+        var timer = null;              //null是空类型，也是一个数据类型
+        console.log(typeof timer);     //输出结果是object,即对象
+
+        // prompt取过来的值都是默认是字符型，如下
+        // prompt('请输入您的年龄')                  弹出一个输入框
+        var age = prompt('请输入您的年龄')         //弹出输入框且保存用户输入的值
+        console.log(age);                         //输出的结果是黑体字，即字符型，下面那行更直观观测
+        console.log(typeof age);                  //查看age变量里面存的值是什么类型 输出结果是string，即字符型
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

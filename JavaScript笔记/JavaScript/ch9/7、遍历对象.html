@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- for…in语句: 用于对数组或者对象的属性进行循环操作(对对象进行遍历非常合适,对象包括属性和方法) -->
+
+    <!-- 语法格式:
+    for(变量 in 对象){
+
+    } -->
+
+    <script>
+
+        //遍历对象(把所有的属性执行一下或输出一下)
+        var obj = {
+            name: '张三',
+            age: 18,
+            sex: '男',
+            fn: function(){}      //方法也可以遍历
+        }
+
+        for(var k in obj){    //变量常用的是k, k不需要赋值
+            console.log(k);   //输出的是对象的全部属性名,有name,age,sex。并没有输出属性值,如张三,18,男。k是变量不需要加引号
+            console.log(obj[k]);    //输出属性值,如张三,18,男。k是变量不需要加引号
+        }
+        // 上面的for每执行一次输出两次,分别是属性名、属性值。obj里面有4个实例,即全部执行后输出6次
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,9 @@
+.clearfix::before,
+.clear::after{
+Content:'';
+display:table;
+clear:both;
+}
+body{
+    font:14px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 数组排序(冒泡排序)
+    冒泡排序是一种简单的排序算法,它重复地走访过要排序的数列,一次比较两个元素,如果他们的顺序错误就把他们交换过来，
+    走访数列的工作是重复地进行直到没有再需要交换,也就是说该数列已经排序完成,这个算法的名字由来是因为越小的元素会
+    经由交换慢慢浮到数列的顶端 -->
+
+    <script>
+
+        // 交换两个变量(与变量里存的是什么数据类型无关)
+        var num1 = 10;
+        var num2 = 20;
+        var temp;        //临时变量
+        temp = num1;     //把num1的值存进temp
+        num1 = num2;     //把num2的值给num1
+        num2 = temp;     //把temp的值给num2
+        console.log(num1,num2);  //输出num1和num2的值
+
+
+
+
+
+        // 冒泡排序(分析)
+        // 冒泡排序是一种算法,把一系列的数据按照一定的顺序进行排列显示(从小到大或从大到小)
+
+        // 1、一共需要交换的趟数 用外层for循环
+        //     5个数据一共需要走4趟,因为最后一趟也就是第5趟不用走,前面4趟就已经够把一整趟排序好
+        //     长度就是数组长度减去1即arr.length-1
+
+        // 2、每一趟交换次数 用里层for循环
+        //     第一趟 交换4次
+        //     第二趟 交换3次
+        //     第三趟 交换2次
+        //     第四趟 交换1次
+        //     长度就是数组长度减去次数
+        //     但是次数是从0开始的即arr.length-i-1
+
+        // 3、最后交换两个变量
+
+        var arr = [5,4,3,2,1];    //数组里面的元素也可以随机打散
+        for(var i = 0; i <= arr.length - 1; i++){         //外层循环管趟数 如果有arr数组里面有5个元素就走4趟
+            for(var j = 0; j <= arr.length - i - 1; j++){    //里层循环负责每趟交换的次数
+                // 下面的代码是内部交换2个变量的值,前一个和后一个的数组元素相比较
+                if(arr[i] > arr[j+1]){      //首先比较arr[0]和arr[1] 即比较arr里面的5>4是否成立
+                    //下面的代码是交换两个临时变量
+                    var temp = arr[j];  //把满足条件的arr[j]给左边的临时变量temp
+                    arr[j] = arr[j + 1];   //把arr数组里面的第二个值给第一个值的位置
+                    arr[j + 1] = temp;     //把临时变量的值给左边arr数组的第一个值的位置
+
+                }
+
+            }
+        }
+        // console.log(arr);
+        alert(arr);
+
+        
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 将数组[2,0,6,1,77,0,52,0,25,7]中大于等于10的元素选出来,放入新数组 -->
+
+    <!-- 分析:
+    声明一个新的数组用于存放新数据newArr
+    遍历原来的旧数组,找出大于等于10的元素
+    依次追加给新数组newArr -->
+
+    <script>
+
+        var arr = [2,0,6,1,77,0,52,0,25,7];
+        var newArr = [];
+        var j = 0;       //为了使新数组从0开始, 依次递增
+        for(var i = 0; i < arr.length; i++){
+            if(arr[i] > 10){     //如果遍历到某一个数组元素大于10,就执行if大括号里面的
+                //newArr = arr[i];  //左边不能用数组名接收右边的数据, 不然左边的数组名会被不断覆盖
+                //newArr[i] = arr[i];    //不能用i接收，左边使用数组里第i个索引位置来接收右边遍历后满足条件的原数组值
+                //newArr[0] = arr[i];     //不能写0, 因为循环之后会重复输出一个值
+                newArr[j] = arr[i];   //如果只是这样写, j每次都是0, 还需要一个自加
+                j++;    // 当满足条件就存入一个值, 存完之后新数组的索引加1, 解决了出现空值的问题
+
+            }
+        }
+        console.log(newArr);  //会把原数组的值全输出来,不满足条件的就输出空值empty, 方法是新定义一个j
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

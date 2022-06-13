@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 利用函数封装方式, 翻转任意一个数组 -->
+    <script>
+
+        function reverse(arr){           //reverse是翻转的意思,  arr是用来接收数组的,相当于旧数组
+            var newArr = [];            //声明一个新数组
+            for(var i = arr.length - 1; i >= 0; i--){   //遍历旧数组。arr.length - 1 旧数组的长度减一
+                newArr[newArr.length] = arr[i]   //把旧数组里的最后一个放到新数组里面
+            }
+            return newArr;
+        }
+        // 上面的var~return是封装函数, 下面才是调用函数，要翻转哪个数组就修改下面var的值,不用管上面的
+        var arr1 = reverse([1,2,3,4,5,6,7,8,9]);
+        console.log(arr1);   //输出arr1翻转后的数组
+
+        var arr2 = reverse(['red','pink','blue','black']);
+        console.log(arr2);   //输出arr1翻转后的数组
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 案例:返回字符位置。查找字符串"abcoefoxyozzopp"中所有o出现的位置以及次数 -->
+
+    <!-- 分析
+    1、核心算法:先查找第一个o出现的位置
+    2、然后只要indexOf返回的结果不是-1就继续往后查找 (indexOf返回的是第一个元素出现的位置,然后就不再找了)
+    3、因为indexOf只能查找到第一个,所以后面的查找需要利用第二个参数,使第二个参数当前索引加1,从而继续查找 -->
+
+
+    <script>
+
+        var str = 'abcoefoxyozzopp';   //单引号或双引号都可以
+        var index = str.indexOf('o');   //左往右找到第一个'o'就结束。查找出第一个,赋值给左边,即index=3
+        //console.log(index);    //输出3。这里注释一下,先别输出,只是分析一下
+        var num = 0;
+        while(index !== -1){   //条件复杂,用while循环。 3不等于-1则执行循环
+            console.log(index);  //先把3打印出来   【(上一轮查找,写在上面)】
+            num++;
+            index = str.indexOf('o',index + 1);//下次查找起始位置加1,掠过已经找出来的元素,满足条件的赋值给左边变量
+            //【(准备下一轮查找,写在下面)】
+            // 执行上面那一行的时候,查找的起始位置加了1,则19~26行代码在再次执行时就会掠过已满足条件的值
+            //当查找str里面额外的元素位置时,就会输出-1,即退出循环
+            //例如查找起始位置为15时,因为str只有14个元素,所以就退出循环
+        }
+        console.log('o出现的次数是:' + num);
+        // 注意数组里面的元素,的逗号和空格会占索引位置
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

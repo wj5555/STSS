@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- 检测字符串长度: 字符串是由若干字符组成,这些字符的数量就是字符串的长度。
+    通过字符串的length属性可以获取整个字符串的长度 -->
+
+
+    <!-- 字符串拼接: 多个字符串中间可以使用 + 进行拼接
+    其拼接的方式为字符串 + 任何类型 = 拼接之后的新字符串
+    拼接前会把与字符串相加的任何类型转成字符串,在拼接成一个新的字符串 -->
+
+
+
+
+    <script>
+
+        var str = 'my name is tomm';       //3+12共15个字符  空格、标点符号、数字都算一个字符
+        console.log(str.length);           //可以获取str的字符串长度
+
+        console.log('阳光' + '沙滩');       //输出的结果是 阳光沙滩
+        console.log('tom猫' + 456);        //字符串型+数字型  输出结果是tom猫456
+        console.log('Mary' + true);        //字符串型+布尔型  输出结果是Marytrue
+        console.log(50 + 50);              //数字型+数字型    输出结果是100
+        console.log('50' + 50);            //字符串型+数字型  输出结果是5050
+        console.log('hello' + ' ' + 'world');        //输出结果是hello world
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 获取日期的总的毫秒形式 -->
+
+    <!-- 思考:
+    Date对象是基于1970年1月1日(世界标准时间)起的毫秒数。 不是当前时间的毫秒数,而是距离1970年1月1日过了多少毫秒
+    为什么计算机起始时间从1970年开始
+    我们经常利用总的毫秒数来计算时间,因为它更精确 -->
+
+
+
+    <script>
+
+        // 方法: 通过 valueOf() 或者 getTime()
+        var date = new Date();
+        console.log(date.valueOf());   //方法。输出一串很长的数字   从1970年到现在过了多少毫秒
+        console.log(date.getTime());   //方法。输出一串很长的数字   从1970年到现在过了多少毫秒
+
+
+
+        //最常用的写法
+        var date1 = +new Date();       //+new Date()返回的是总的毫秒数，即从1970年到现在过了多少毫秒
+        console.log(date1);            //输出从1970年到现在过了多少毫秒
+
+        //H5新增的写法,获得总的毫秒数
+        console.log(Date.now());       //Date.now()返回的是从1970年到现在过了多少毫秒，输出
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var num = 10;
+        function fn(){
+            console.log(num);
+            var num = 20;
+            console.log(num);
+        }
+        fn();
+
+
+
+        // 解析过程如下:
+        var num;
+        function fn(){
+            var num;
+            console.log(num);
+            num = 20;
+            console.log(num);
+        }
+        num = 10;
+        fn();
+
+
+
+        /* 执行过程如下:
+        var num (执行)
+        function(没调用不执行)
+        num = 10(执行)
+        function(由fun()调用之后,此时开始执行)
+        var num (执行,但是这个num没有赋值)
+        console.log(执行);  按照就近原则,输出num,但这个变量num没有赋值,所以输出undefined
+        num = 20(执行)
+        console.log(执行);  按照就近原则,输出num,此时num为2,所以输出2 */
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

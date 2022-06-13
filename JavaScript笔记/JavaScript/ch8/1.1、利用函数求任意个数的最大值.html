@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 是求任意个数的最大值, 而不是求数组的最大值 -->
+
+    <script>
+
+        function getMax(){
+            var max = arguments[0];       //把用户输入的数组里面的第一个实参临时作为最大值max
+            for(var i = 1; i < arguments.length; i++){  //遍历数组,i从1开始就行,即从数组里的第二个变量开始
+                if(arguments[i] > max){   //如果遍历到有大于临时的max的时候
+                    max = arguments[i]    //就把这个arguments数组里面的值赋值给max
+                }
+            }
+            return max;   //循环结束后就返回max的值
+        }
+        // 如下都可能是用户输入的实参， 不管有多少log都会输出每个log里面的最大值
+        console.log(getMax(1,2,3));   //求getMax()里面的最大值
+        console.log(getMax(1,2,3,4,5));   //有可能用户输入的是这个
+        console.log(getMax(1,2,3,4,5,6,7,8,9,10));   //有可能用户输入的是这个
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

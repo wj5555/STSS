@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var arr = [2,0,6,1,77,0,52,0,25,7];
+        var newArr = [];
+        // 刚开始newArr.length就是0   因为刚开始新数组没有元素, 即长度为0
+        for(var i = 0; i < arr.length; i++){
+            if(arr[i] > 10){   //把大于10的筛选出来
+                newArr[newArr.length] = arr[i];     //左边换成newArr.length
+                // 当右边的值给左边后, newArr.length就刚好变成2用于存放符合条件的第二个值
+                // 恰好新数组的索引在增加, 有位置来存放右边的值
+            }
+        }
+        console.log(newArr);
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 前面学的两种创建对象,一次只能创建一个对象 -->
+
+    <script>
+
+        // 利用构造函数创建对象,一次可以创建多个对象
+
+        /* 构造函数里面装的是对象,把我们对象里面一些相同的属性和方法抽象出来封装到函数里面,构造函数是一种特殊的
+        函数,主要用来初始化对象,即为对象成员变量赋初始值,它总与new运算符一起使用,我们可以把对象中一些公共的
+        属性和方法抽取出来,然后封装到这个函数里面 */
+
+
+        // 要求: 创建影视四大天王的对象
+        // 分析: 其中会有相同的属性,比如名字、年龄、性别。其中也有相同的方法,比如唱歌
+
+        /* 构造函数的语法格式:
+
+        function 构造函数名(形参){
+            this.属性 = 值;          //this的意思是当前的，指向的作用
+            this.方法 = function{}
+        }
+        new 构造函数名(实参);  //调用构造函数*/
+
+        function Star1(uname1,age1,sex1){       //函数名的首字母要大写
+            this.name1 = uname1;       //把拿到实参数据的形参的值赋值给this
+            this.age1 = age1;
+            this.sex1 = sex1;
+            this.sing1 = function(sang1){       //创建方法  function()小括号里面的sang是形参
+                console.log(sang1);
+            }
+        }
+        var ldh = new Star1('刘德华',18,'男');     //把右边构造函数的结果传给左边的变量ldh
+        //构造函数不需要return,因为new Star构造函数返回的是对象,new的作用就有返回的作用,相当于有了return
+        console.log(typeof ldh);    //查看ldh的数据类型是什么,输出object即对象，验证new Star构造函数返回的是对象
+        console.log(ldh.name1);    //输出刘德华
+        console.log(ldh['sex1']);  //输出男
+        ldh.sing1('冰雨');    //调用方法,'冰雨'作为实参,传到sing这个方法的形参里面  输出冰雨
+
+
+        // 创建张学友对象
+        var zxy = new Star1('张学友',19,'男');  //直接输入就可以创建张学友对象,因为使用了上面的构造函数
+        console.log(zxy.name1);     //输出张学友
+        console.log(zxy.age1);      //输出19
+        zxy.sing1('李香兰');
+
+
+        // 调用构造函数必须使用new
+        // 只要new Star()  那么调用函数就创建了一个函数 ldh{}
+
+
+
+
+
+
+        /* 案例
+        要求: 利用构造函数两个角色对象
+        分析: 函数中的公共部分包括: 姓名属性(name),类型属性(type),血量属性(blood),攻击方式(attack)
+        信息: 遗迹石魔  力量型  5000血量  攻击:石块小鬼
+              苍岚主宰  射手型  5000血量  攻击:光剑飞镖 */
+        
+        function Star(name,type,blood,attack){
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = attack;
+        }
+        var stone = new Star('遗迹石魔','力量型',5000,'石块小鬼');
+        console.log(stone.name);
+        console.log(stone.blood);
+
+        var boss = new Star('苍岚主宰','射手型',5000,'光剑飞镖');
+        console.log(boss.name);
+        console.log(boss.blood);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

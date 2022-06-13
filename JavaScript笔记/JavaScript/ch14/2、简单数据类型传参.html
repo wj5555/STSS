@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 函数的形参也可以看做是一个变量,当我们把一个值类型变量作为参数传给函数的形参时,其实是把变量在栈
+    空间里的值赋值了一份给形参,那么在方法内部对形参做任何修改,都不会影响到外部变量 -->
+
+
+    <script>
+
+        //简单数据类型传参
+        function fn(a){
+            a++;
+            console.log(a);
+        }
+        var x = 10;
+        fn(x);
+        console.log(x);
+
+
+
+        // 相当于执行如下(预解析:先提升变量,再提升函数,再提升函数里面的变量)
+        var x;   //执行
+        function fn(x){  //第一次还没调用,不执行   第二次调用,执行
+            x++;      //第二次时,x自加1,此时x=11
+            console.log(x);  //第二次时,输出11
+        }
+        x = 10;  //执行
+        fn(x);  //调用, 去执行fn函数,
+        console.log(x);  //'第二次时'执行完后,最后执行这里,输出x,注意这里的x不是函数里面的,就是普通的x,输出10
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

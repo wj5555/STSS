@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 增加数组元素的两种方式: 修改length长度 ，修改索引号 -->
+
+    <script>
+
+        // 通过修改length长度新增数组元素
+        //1、修改length长度可实现扩容
+        //2、length属性是可读写的
+        var arr = ['red','green','blue'];
+        console.log(arr.length);    //输出数组长度
+        arr.length = 5;     //手动修改数组长度, 即此时数组里面应该有5个元素
+        console.log(arr);   //输出arr数组的全部元素, 会多输出两个empty, 即多了两个空值, 实现了数组扩容,缺陷如下:
+
+        console.log(arr[3]);  //输出扩容后arr数组里面的前三个元素,即下标为0,1,2,的元素, 输出结果为undefined
+        console.log(arr[4]);  //输出扩容后arr数组里面的前四个元素,即下标为0,1,2,3,的元素, 输出结果为undefined
+
+        // 原因是扩容了arr之后没有给扩容的空间给值, 默认值输出为undefined
+
+
+
+        
+
+        // 通过修改数组索引新增数组元素
+        //1、可以通过修改数组索引的方式追加数组元素
+        var arr1 = ['red','green','blue'];
+        arr1[3] = 'pink';  //arr1数组里面原本没有下标为3的元素, 直接添加索引达到新增数组元素
+        console.log(arr1);  //输出arr1数组里面的全部元素, 输出结果在数组里新增了pink
+        // 推荐使用, 原理是追加数组元素
+
+        arr1[4] = 'black';   //在数组arr1里面新增一个元素
+        console.log(arr1);   ////输出arr1数组里面的全部元素, 输出结果在数组里新增了black
+
+        arr1[0] = 'new';      //在被占用的索引值里面新增元素
+        console.log(arr1);    //输出结果是强制替换原有的那个的索引值的元素
+        // 在没有被占用的索引值新增元素称为追加
+        // 在已经被占用的索引值新增元素称为替换
+
+        arr1 = '看看有什么变化';      //把原有数组直接等于一个一个字符串
+        console.log(arr1);           //替换arr1里面的所有元素, 只有'看看有什么变化'字符串输出
+        //所有不要直接给数组名赋值,否则里面的数组元素都没有了
+        //正确方式是使用添加索引号的方式添加新变量
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

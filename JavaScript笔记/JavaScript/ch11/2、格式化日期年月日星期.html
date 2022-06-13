@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 思考: 我们想要2019-8-8 8:8:8格式的日期,怎么办  (需要用到日期格式化)  -->
+
+
+
+<!-- 
+
+    方法名                   说明                          代码
+
+    getFullYear()           获取当年                       dObj.getFullYear()
+
+    getMonth()              获取当月(0-11)                 dObj.getMonth()
+
+    getDate()               获取当天日期                   dObj.getDate()
+
+    getDay()                获取星期几(周日0到周六6)        dObj.getDay()
+
+    getHours()              获取当前小时                   dObj.getHours()
+
+    getMinutes()            获取当前分钟                   dObj.getMinutes()
+
+    getSeconds()            获取当前秒钟                   dObj.getSeconds()
+
+ -->
+
+
+
+    <!-- 例如: dateObj.getFullYear()   根据当地时间，返回一个对应于给定日期的年份数字 -->
+
+    <!-- 注意： getMonth()              获取当月(0-11)                 dObj.getMonth()
+    获取的月份是0~11,,即0对应1月份,11对应12月份,实际应用的时候需要加1 -->
+
+
+
+    <script>
+
+        var date = new Date();
+        console.log(date.getFullYear());    //返回当前日期的年        输出2022
+        //console.log(date.getMonth());       //返回当前日期的月(5)   输出4 因为月份获取是0~11
+        console.log(date.getMonth() + 1);    //返回当前日期的月,输出5
+        console.log(date.getDate());         //返回当前日期的日,输出23
+        console.log(date.getDay());        //返回当前日期的星期,输出1  注意如果是周日的话会输出0
+
+
+
+
+
+        //要求: 写一个输出当前的年月日星期(比如 2022年5月23日星期一)
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var datee = date.getDate();
+
+        // 星期比较复杂,需要用数组,如下
+        var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'] //注意星期日的索引是0
+        var day = date.getDay()  //因为getDay返回的是数字,所以需要上面的数组,转换为字符
+
+        console.log('今天是:' + year + '年' + month + '月' + datee + '日' + arr[day]); 
+        //arr[day]是返回数组中的第day个,因为day是返回数字,数字可以作为索引值输出数组中的元素
+        //上面那行输出的是数字,再用字符串拼接的方法拼接起来就可以了
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

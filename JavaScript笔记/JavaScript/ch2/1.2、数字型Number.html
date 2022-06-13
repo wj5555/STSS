@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- js把数据类型分为如下两类:
+    简单数据类型(Number,String,Boolean,Undefined,Null)
+    复杂数据类型(object) -->
+
+
+
+    <!-- 简单数据类型(基本数据类型)
+
+    简单数据类型          说明                                                默认值
+
+    Number               数字型,包含整型值和浮点型值,如21、0.21                0
+
+    Boolean              布尔值类型,如true、false,等价于1和0                  false
+
+    String               字符串类型,如"张三",注意在js里的字符串都带引号         ""
+
+    Undefined            var a; 声明了变量a但是没有给值,此时a=undefined        undefined
+
+    Null                 var a=null; 声明了变量a为空值                        null -->
+
+
+
+<!--
+    数字型范围:     
+    alert(Number.MAX_VALUE);        //最大值 1.7976931348623157e+308
+    alert(Number.MIN_VALUE);        //最小值 5e-324
+ -->
+
+
+<!-- 
+    数字型的三个特殊值:
+    alert(Infinity);       //Infinity    代表无穷大,大于任何数值
+    alert(-Infinity);      //-Infinity   代表无穷小,小于任何数值
+    alert(NaN);            //NaN         NaN a number,代表任何一个非数值
+ -->
+
+
+
+    <script>
+
+        var num = 10;                //num 数字型
+        var PI = 3.14;               //PI 数据型
+
+        // 在程序里面数字前面加0,表示八进制 范围是0~7
+        var num1 = 010;              //八进制
+        console.log(num1);           //输出num1,看看num1的十进制是多少结果是10
+        
+        var num2 = 012;              //八进制
+        console.log(num2);           //查看num2的十进制
+
+        // 在程序里面数字前面加0x,表示十六进制  范围是0 ~ 9，a ~ f
+        var num3 = 0x9;              //十六进制
+        console.log(num3);           //查看num3的十进制
+
+        var num4 = 0xa;              //十六进制
+        console.log(num4);           //查看num4的十进制
+
+        // 数字型的最大值
+        console.log(Number.MAX_VALUE);
+
+        // 数字型的最小值
+        console.log(Number.MIN_VALUE);
+
+        // 无穷大
+        console.log(Number.MAX_VALUE * 2);       //输出的结果为Infinity,代表无穷大
+
+        // 无穷小
+        console.log(-Number.MAX_VALUE * 2);       //输出的结果为-Infinity,代表无穷小
+
+        // 非数字(非数值)
+        console.log('你好呀' - 100);               //字符串跟数字相减,无法得到一个数值,即输出的是非数值NaN
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

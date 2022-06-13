@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .clearfix::after,
+        .clearfix::before {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 1000px;
+            height: 1500px;
+            position: absolute;
+            right: 0;
+            left: 0;
+  
+        }
+
+        .top {
+            width: 1000px;
+      
+        }
+
+        .top1 {
+            width: 360px;
+            height: 300px;
+            background: red;
+            float: left;
+            margin-right: 40PX;
+        }
+
+        .top2 {
+            width: 600px;
+            height: 300px;
+            background: blue;
+            float: left;
+        }
+
+        .MIDDLE {
+            margin-top: 40px;
+        }
+
+        .m1 {
+            width: 200px;
+            height: 300px;
+            background: black;
+            float: left;
+        }
+
+        .m2 {
+            width: 300px;
+            height: 300px;
+            background: rgb(209, 157, 157);
+            float: left;
+            margin-left: 40px;
+        }
+
+        .m3 {
+            width: 420px;
+            height: 300px;
+            background: rgb(181, 209, 157);
+            float: right;
+        }
+
+        ul {
+width: 1000px;
+margin-top: 40px;
+
+
+        }
+
+        li {
+            width: 188px;
+            height: 190px;
+            background: orange;
+            list-style: none;
+            float:left;
+           
+         margin: 5px;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top clearfix">
+            <div class="top1"></div>
+            <div class="top2"></div>
+        </div>
+        <div class="MIDDLE clearfix">
+            <div class="m1"></div>
+            <div class="m2"></div>
+            <div class="m3"></div>
+
+        </div>
+
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
+</body>
+
+</html>

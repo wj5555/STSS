@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 要求: 新建一个数组, 里面存放10个个数(1~10) -->
+
+    <!-- 分析:
+    使用循环来追加数组
+    声明一个空数组arr
+    循环中的计数器i可以作为数组元素存入(注意数字索引号是从0开始的,所以计数器从0开始比较合适) -->
+
+    <script>
+
+        var arr = [];
+        for(var i = 0; i < 10; i++){     //计数器i当作索引值使用
+            //arr = i;    //不要直接给数组名赋值,否则会替换原来数组里面的元素
+            arr[i] = i + 1;   //arr里面的第i个索引名在循环时被第i个元素赋值进去
+            // 上面那行的左边是索引值i从0开始的, 所以右边要达到输入数字1~10就要使i+1
+            // 当i等于0时, 数组第1个元素的值就会等于等号右边的值
+            // 当i等于1时, 数组第2个元素的值就会等于等号右边的值
+        }
+        console.log(arr);   //循环结束后输出数组arr   输出数字1~10十个值在数组arr里面
+
+        // 如果要存放数字1~100的话,只需要把i的范围改为i<100就可以了
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

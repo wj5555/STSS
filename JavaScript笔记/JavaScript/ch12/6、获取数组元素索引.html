@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 【方法是数组中的内置对象】 -->
+
+    <!-- 数组索引方法
+    
+    方法名              说明                               返回值
+
+    indexOf()          数组中查找给定元素的第一个索引        如果存在返回索引号,如果不存在,则返回-1
+
+    lastIndexOf()      在数组中的最后一个索引                如果存在返回索引号,如果不存在,则返回-1 -->
+
+
+
+    <script>
+
+        // 【indexOf()和lastIndexOf()效果一样。 indexOf()是在数组里从前往后找,lastIndexOf()是在数组里从后往前找】
+
+
+
+        var arr = ['red','green','blue','black','yellow',100,true,'red'];
+
+        console.log(arr.indexOf('black'));   //查找black的索引值,输出3
+
+        console.log(arr.indexOf(100));   //查找100的索引值,输出5
+
+        console.log(arr.indexOf(true));   //查找true的索引值,输出6
+
+        console.log(arr.indexOf('red'));
+        //查找red的索引值,但是数组里面有两个red元素,只输出0,即只返回第一个满足条件的索引值
+
+        console.log(arr.indexOf('hello'));  //查找数组里面没有的元素,输出-1，即数组里没有这个元素
+
+
+
+
+        console.log(arr.lastIndexOf('blue'));  //查找blue的索引值,输出2
+
+        console.log(arr.lastIndexOf(100));     //查找100的索引值,输出5
+
+        console.log(arr.lastIndexOf(true));    //查找true的索引值,输出6
+
+        console.log(arr.lastIndexOf('world'));   ////查找数组里面没有的元素,输出-1，即数组里没有这个元素
+
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

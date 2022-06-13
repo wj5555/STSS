@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 【方法是数组中的内置对象】 -->
+
+    <!-- 有一个数组['a','b'.'z','a','x','a','x','c','d'],要求去除数组中重复的元素 -->
+
+    <!-- 分析
+    1、把旧数组里面不重复的元素选取出来放到新数组中,重复的元素只保留一个,放到新数组中去重
+    2、核心算法是遍历旧数组,然后用旧数组元素去查询新数组,如果该元素在新数组里面没有出现过,就添加,否则就不添加
+    3、去重即判断元素在数组里是否存在,利用获取索引值即 [ 新数组.indexOf(数组元素) ] 如果返回-1就说明新数组里面没有该元素 -->
+
+
+
+    <script>
+
+        //封装一个去重的函数(unique)   unique的意思是单独的
+        function unique(arr){
+            var newArr = [];
+            for(var i = 0; i < arr.length; i++){   //遍历送过来的旧数组
+                if(newArr.indexOf(arr[i]) === -1){  //把旧数组元素遍历到新数组里面去时,如果索引值等于-1,即新数组里面没有这个元素
+                    newArr.push(arr[i]);    //把满足条件的元素存进新数组
+                }
+            }
+            return newArr;  //返回newArr的值
+        }
+        var demo = unique(['a','b','z','a','x','a','x','c','d']);
+        //上面那行是把右边的实参传到function的形参里面,把最后的返回值赋值给左边的demo
+        console.log(demo);   //输出用户给的去重后的数组
+        
+        
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

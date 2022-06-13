@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 判断闰年: 接收用户输入的年份,如果是闰年就弹出闰年,否则弹出是平年 -->
+
+
+    <!-- 分析:
+    首先有一个算法负责判断能被4整除且不能整除为100的为闰年(例如2004年是闰年,1901年不是闰年),或者能被400整除
+    的就是闰年
+
+    弹出prompt输入框,让用户输入年份,把这个值取过来保存到变量中
+
+    使用if语句来判断是否是闰年,如果是闰年就执行if大括号里面的输出语句,否则执行else里面的输出语句
+
+    注意且&&还有或||的用法,同时注意判断整除的方法是取余为0 -->
+
+
+
+    <script>
+
+        var year = prompt('请输入年份');
+        //下面那行,year余4要为0,即会被4整除。year余100不能为0,即不能被100整除
+        //下面那行 后面多出来的year % 400 == 0,作用是真真为真、且真假也为真。负责真假也为真
+        if(year % 4 == 0 && year % 100 !=0 || year % 400 == 0){
+            alert('您输入的年龄是闰年');
+        }else{
+            alert('您输入的年龄是平年');
+        }
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

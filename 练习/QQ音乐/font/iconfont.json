@@ -1,0 +1,79 @@
+{
+  "id": "3453508",
+  "name": "1",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "201228",
+      "name": "3.1我的",
+      "font_class": "31wode",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "573323",
+      "name": "同步收藏",
+      "font_class": "tongbushoucang",
+      "unicode": "e6d4",
+      "unicode_decimal": 59092
+    },
+    {
+      "icon_id": "827971",
+      "name": "推荐",
+      "font_class": "tuijian",
+      "unicode": "e6a6",
+      "unicode_decimal": 59046
+    },
+    {
+      "icon_id": "2076371",
+      "name": " 历史小2",
+      "font_class": "lishixiao",
+      "unicode": "e8bd",
+      "unicode_decimal": 59581
+    },
+    {
+      "icon_id": "6775644",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "eca1",
+      "unicode_decimal": 60577
+    },
+    {
+      "icon_id": "19654124",
+      "name": "音乐列表",
+      "font_class": "yinleliebiao",
+      "unicode": "e7fe",
+      "unicode_decimal": 59390
+    },
+    {
+      "icon_id": "1488915",
+      "name": "音乐",
+      "font_class": "yinle",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "17654821",
+      "name": "录像",
+      "font_class": "luxiang",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "18940614",
+      "name": "电台",
+      "font_class": "diantai",
+      "unicode": "e693",
+      "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "23528427",
+      "name": "本地",
+      "font_class": "bendi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

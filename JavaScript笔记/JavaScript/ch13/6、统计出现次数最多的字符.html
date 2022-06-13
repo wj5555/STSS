@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // 先预习一下前面学到的知识
+        //有一个对象,来判断是否有该属性,  写法是 对象['属性名']
+        var a = {
+            age: 18     //末尾不用加分号
+        }
+        if(a['age']){   //判断是否有这个属性,有则执行'里面有该属性'
+            console.log('里面有该属性');
+        } else{
+            console.log('没有该属性');  //没有则执行else后面的'没有该属性'
+        }
+
+
+
+
+        /* 本课知识如下
+
+        案例: 判断一个字符串'abcoefoxyozzopp'中出现次数最多的字符,并统计其次数
+
+        分析
+        1、核心算法是利用charAt() 再遍历这个字符串 charAt()是把数组里面的元素取出来
+        2、把每个字符都存储给对象,如果对象没有该属性,就为1,如果已经存在就+1
+        3、遍历对象,得到最大值和该字符
+        
+        算法(对象或属性)(循环一次判断一次,判断一次存在就加1)
+        a.a = 1
+        a.b = 1
+        a.c = 1
+        a.f = 1
+
+        */
+
+        var str = 'abcoefoxyozzopp';
+        var b = {};  //创建对象
+        for(var i = 0; i < str.length; i++){
+            var chars = str.charAt(i)  //末尾没分号,把str数组里面的每个元素都遍历一次,把值赋值给左边的变量
+            //if(b.a){}   //b是空数组,a是原数组的元素  。不能这样写
+            if(b[chars]){  //b[chars]是str.charAt(i)里面取过来的每一个字符 。b[chars]得到的是属性值
+                b[chars]++;
+            } else{
+                b[chars] = 1
+            }
+        }
+        console.log(b);
+
+        //再遍历b对象
+        var max = 0;   //里面存的永远是最大值
+        var ch = '';  //空变量，存字符
+        for(var k in b){   //k得到的是属性名, b[k]是属性值
+            if(b[k] > max){
+                max = b[k];
+                ch = k;  //k只在for里面有用,所以需要在外面要创一个ch的空字符串变量
+            }
+        }
+        console.log(max);   //输出4,最大次数出现是4次
+        console.log('最多的字符是' + ch);
+
+        
+
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

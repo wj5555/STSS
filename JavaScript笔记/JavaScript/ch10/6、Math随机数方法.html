@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 随机数方法 random()  这个方法返回的是一个随机数   random是随机的意思-->
+
+    <!-- 建议在MDN文档里搜索Math.random(),了解相关用法 -->
+
+    <!-- Math.random() 函数返回一个浮点数,  伪随机数在范围从0到小于1,也就是说,从0(包括0)往上,但是不包括1(排除1),
+    然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。 -->
+
+    <!-- random() 这个方法里面,是不跟参数的 -->
+
+    <script>
+
+        console.log(Math.random());    //输出一个随机小数(17位)，每刷新一次值都不一样,值的范围[0,1)
+
+
+        //求两个数之间的随机整数,并且包含这两个整数 function可以封装使用
+        function getRandom(min,max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandom(1,10)); //1和10是实参,传到函数的形参里面,输出1~10之间的一个随机整数,每次刷新值都不同
+
+
+
+        //案例随机点名
+        var arr = ['张三','王五','李四','小明','小华'];    //创建一个数组,可随意增减元素
+        //console.log(arr[(getRandom(0,4))]);    //(getRandom(0,4))是一个随机整数，作为索引输出数组里面的名字
+        console.log(arr[(getRandom(0,arr.length - 1))]);  //自动确定索引长度,数组索引从0开始,所以要减1
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

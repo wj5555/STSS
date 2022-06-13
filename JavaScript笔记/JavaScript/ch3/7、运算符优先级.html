@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<!--     
+
+    优先级            运算符                 顺序
+
+    1                小括号                 ()
+
+    2                一元运算符             ++ -- !
+
+    3                算数运算符             先*/%后+--
+
+    4                关系运算符             > >=  < <=
+
+    5                相等运算符             ==  != === !==
+
+    6                逻辑运算符             先&&后||(与优先级大于或)
+
+    7                赋值运算符             =
+
+    8                逗号运算符             ,
+
+
+    【一元运算符里面的'非',也就是'!'的优先级很高】
+
+ -->
+
+
+
+    <script>
+
+        // ++m或!mm  称为一元运算符
+
+        // 2 + 3    称为二元运算符
+
+
+        console.log(4 >= 6 || '人' != '树' && !(12 * 2 == 20) && true);
+        // 上面那行化简为 f||t&&t&&t   然后先&&再||,即化简为f||t,结果为true
+
+        var num = 10;
+        console.log(5 == num/2 && (2 + 2 * num).toString() == '22');   //toString是转换为字符串型
+        // 上面那行化简为 t && t 结果为true
+
+
+        var a = 3 > 5 && 2 < 7 && 3 === 4;
+        // 上面那行化简为 f&&t&&f,结果为f
+        console.log(a);
+
+        var b = 3 <= 4 || 3 > 1 || 3 != 2;
+        // 上面那行化简为 t||t||t,结果为t
+        console.log(b);
+
+        var c = 2 === "2";       //先运算===再运算=, 因为=的优先级比===低, c=f  
+        console.log(c);          //结果为f
+        var d = !c || b  &&  a;  //先运算!c再运算&&最后运算||
+        //由于c是f,所以!c为t  b和a上面那些可知b为t、c为f    即上面那行化简为t||t&f,结果为t
+        console.log(d);
+
+        
+    </script>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

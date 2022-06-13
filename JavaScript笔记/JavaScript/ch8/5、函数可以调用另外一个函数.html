@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 因为每个函数都是独立的代码块, 用于完成特殊任务, 因此经常会用到函数相互调用的情况 -->
+
+
+    <script>
+
+        function fn1(){
+            console.log(11);
+            fn2();      //在fn1里面调用了fn2函数
+        }
+        fn1();    //调用fn1,  只有调用了才会执行
+        //在fn1里面调用执行了之后,又在fn里面调用执行fn2, 即输出了11后再输出22
+
+        function fn2(){
+            console.log(22);
+        }
+        //这里虽然没调用, 但是在上一个fn1函数里面调用了,所以会在fn1里面执行fn2函数
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        var myname = '小帅';
+        console.log(myname);
+
+        myname = '迪丽热巴';  /*第二次赋值，会覆盖*/
+        console.log(myname);
+
+
+        // 声明多个变量
+        var gz = 999,
+            address = '酷跑大陆',
+            age = 8;
+
+
+        // 声明变量的特殊情况
+        1.
+        var sex;             /*只声明不赋值*/
+        console.log(sex);    /*undefined,未定义*/
+
+        2.
+        console.log(tel);    /*不声明不赋值直接使用变量tel, 会报错*/
+
+        3.
+        qq = 110;            /*不声明直接赋值且在下一行使用*/
+        console.log(qq);     /*不报错, js是允许不声明的, 不提倡, 影响全局变量*/
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
